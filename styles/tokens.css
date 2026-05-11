@@ -1,0 +1,22 @@
+/* Design tokens — 색상, 그림자 등 공통 변수 */
+:root {
+  --blue: #3182F6;
+  --blue-600: #2563EB;
+  --blue-50: #F4F8FF;
+  --blue-100: #E8F1FF;
+  --ink: #191F28;
+  --ink-2: #4E5968;
+  --ink-3: #8B95A1;
+  --ink-4: #B0B8C1;
+  --line: #E5E8EB;
+  --line-soft: #F2F4F6;
+  --bg: #ffffff;
+  --bg-gray: #F9FAFB;
+  --bg-blue: #F4F8FF;
+  --warn: #F04452;
+  --ok: #00C896;
+  --yellow: #FFB02E;
+  --shadow-card: 0 2px 8px rgba(25, 31, 40, 0.04), 0 1px 0 rgba(25, 31, 40, 0.02);
+  --shadow-card-h: 0 12px 32px -8px rgba(25, 31, 40, 0.16), 0 1px 0 rgba(25, 31, 40, 0.02);
+  --shadow-phone: 0 40px 80px -20px rgba(49, 130, 246, 0.25), 0 20px 40px -20px rgba(25, 31, 40, 0.2);
+}

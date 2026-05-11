@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>모앗(Moat) — 동호회 운영, 한 앱에서 끝.</title>
-<meta name="description" content="정모, 회비, 게스트, 코트 배치, 투표까지 한 앱에서. 단톡방과 엑셀로 운영하던 동호회를 모앗 하나로.">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>모앗(Moat) | 동호회 운영, 한 앱에서 끝.</title>
+<meta name="description" content="정모, 회비, 게스트, 코트 배치, 투표까지 한 앱에서. 단톡방과 엑셀로 운영하던 동호회를 모앗 하나로." />
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="모앗(Moat) — 동호회 운영, 한 앱에서 끝.">
+<meta property="og:title" content="모앗(Moat) | 동호회 운영, 한 앱에서 끝.">
 <meta property="og:description" content="정모, 회비, 게스트, 코트 배치, 투표까지 한 앱에서. 단톡방과 엑셀로 운영하던 동호회를 모앗 하나로.">
 <meta property="og:image" content="assets/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -16,120 +16,179 @@
 <meta property="og:site_name" content="모앗 (Moat)">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="모앗(Moat) — 동호회 운영, 한 앱에서 끝.">
+<meta name="twitter:title" content="모앗(Moat) | 동호회 운영, 한 앱에서 끝.">
 <meta name="twitter:description" content="정모, 회비, 게스트, 코트 배치, 투표까지 한 앱에서.">
 <meta name="twitter:image" content="assets/og-image.png">
 
-<meta name="theme-color" content="#2563eb">
+<meta name="theme-color" content="#3182F6">
 
 <link rel="icon" type="image/jpeg" href="assets/icon.jpg">
 <link rel="apple-touch-icon" href="assets/icon.jpg">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
 
-<link rel="stylesheet" href="styles.css">
+<!-- App styles: load order matters (tokens → base → components → layout → animations) -->
+<link rel="stylesheet" href="styles/tokens.css" />
+<link rel="stylesheet" href="styles/base.css" />
+<link rel="stylesheet" href="styles/components.css" />
+<link rel="stylesheet" href="styles/layout.css" />
+<link rel="stylesheet" href="styles/animations.css" />
 </head>
 <body>
 
 <!-- NAV -->
-<nav>
-  <div class="container nav-inner">
-    <a href="#" class="logo">
-      <div class="logo-icon"></div>
-      <span>모앗 (Moat)</span>
+<nav class="nav" id="nav">
+  <div class="wrap-wide nav-inner">
+    <a href="#" class="brand">
+      <img src="assets/icon.jpg" alt="" class="brand-mark" />
+      <span>모앗</span>
     </a>
     <div class="nav-links">
-      <a href="#features" class="nav-link">기능</a>
-      <a href="#compare" class="nav-link">비교</a>
-      <a href="#faq" class="nav-link">자주 묻는 질문</a>
+      <a href="#features">기능</a>
+      <a href="#compare">비교</a>
+      <a href="#faq">자주 묻는 질문</a>
+      <a href="#download" class="nav-cta">앱 받기</a>
     </div>
   </div>
 </nav>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="container">
-    <div class="hero-grid">
-      <div class="hero-text">
-        <div class="badge-pill">
-          <span class="badge-dot"></span>
-          동호회 운영, 한 앱에서
+<header class="hero">
+  <div class="wrap-wide hero-grid">
+    <div>
+      <span class="hero-chip"><span class="dot">✦</span> 동호회 운영, 한 앱에서</span>
+      <h1>
+        <span class="line">운영진의 <span class="accent">2시간</span>을,</span>
+        <span class="line"><span class="accent">즐기는 시간</span>으로.</span>
+      </h1>
+      <p class="hero-sub">
+        매달 반복되던 운영진의 일을 앱이 대신해요.<br/>
+        멤버는 토스로 송금하고, 정모 참석도 한 번 탭으로 끝.
+      </p>
+
+      <div class="hero-ctas" id="download">
+        <a class="btn btn-dark" href="https://apps.apple.com/kr/app/id6761710550">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 12.04c-.03-3.16 2.58-4.68 2.7-4.75-1.47-2.15-3.76-2.45-4.57-2.48-1.94-.2-3.79 1.14-4.78 1.14-.99 0-2.52-1.11-4.14-1.08-2.13.03-4.1 1.24-5.19 3.13-2.22 3.84-.57 9.52 1.6 12.64 1.06 1.53 2.32 3.24 3.97 3.18 1.6-.07 2.21-1.03 4.14-1.03 1.93 0 2.48 1.03 4.18.99 1.72-.03 2.81-1.55 3.86-3.09 1.22-1.77 1.72-3.49 1.74-3.58-.04-.02-3.34-1.28-3.37-5.07zM13.97 2.85c.88-1.06 1.47-2.54 1.31-4.01-1.27.05-2.8.84-3.71 1.9-.81.94-1.52 2.44-1.33 3.88 1.41.11 2.85-.72 3.73-1.77z"/></svg>
+          App Store
+        </a>
+        <a class="btn btn-white" href="https://play.google.com/store/apps/details?id=com.moat.moat_app">
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.609 1.814a.998.998 0 0 0-.609.92v18.532a1 1 0 0 0 .609.92L13.792 12 3.609 1.814z"/><path fill="#FBBC04" d="M16.738 9.06 13.792 12l2.946 2.94 3.69-2.142a1.078 1.078 0 0 0 0-1.596L16.738 9.06z"/><path fill="#EA4335" d="m13.792 12-10.183 10.186a.998.998 0 0 0 1.146.18l11.983-6.94L13.792 12z"/><path fill="#4285F4" d="M13.792 12 16.738 9.06 4.755 2.118a.998.998 0 0 0-1.146.18L13.792 12z"/></svg>
+          Google Play
+        </a>
+      </div>
+
+      <div class="hero-meta">
+        <span><b>iOS · Android</b> 동시 지원</span>
+        <span><b>1분</b>이면 모임 시작</span>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="blob"></div>
+
+      <div class="float float-1" data-screens="schedule">
+        <div class="ico">📅</div>
+        <div>
+          <div class="t">오늘 정모 D-Day</div>
+          <div class="s">시립 다목적체육관</div>
         </div>
-        <h1>
-          운영은 자동으로,<br>
-          <span class="accent">참여는 한 번에.</span>
-        </h1>
-        <p class="lead">
-          운영진이 매달 반복하던 일은 앱이 자동으로.<br>
-          멤버는 토스로 송금하고 정모 참석도 한 번 탭으로 끝납니다.
-        </p>
-        <div class="hero-cta">
-          <a class="store-badge" data-store="apple" href="https://apps.apple.com/kr/app/id6761710550" aria-label="App Store에서 다운로드">
-            <img src="assets/appstore-badge.svg" alt="Download on the App Store">
-          </a>
-          <a class="store-badge" data-store="google" href="https://play.google.com/store/apps/details?id=com.moat.moat_app" aria-label="Google Play에서 다운로드">
-            <img src="assets/googleplay-badge.png" alt="Google Play에서 다운로드">
-          </a>
+      </div>
+      <div class="float float-2" data-screens="notification">
+        <div class="ico">🔔</div>
+        <div>
+          <div class="t">새 투표 알림</div>
+          <div class="s">대회참석</div>
+        </div>
+      </div>
+      <div class="float float-3" data-screens="payment">
+        <div class="ico">₩</div>
+        <div>
+          <div class="t">토스로 송금</div>
+          <div class="s">회비 5,000원</div>
+        </div>
+      </div>
+      <div class="float float-4" data-screens="guest">
+        <div class="ico">🏸</div>
+        <div>
+          <div class="t">게스트 신청 1명</div>
+          <div class="s">김도현 · A조</div>
+        </div>
+      </div>
+      <div class="float float-5" data-screens="court">
+        <div class="ico">🏸</div>
+        <div>
+          <div class="t">1번 코트 게임 중</div>
+          <div class="s">A조 · 2/4명</div>
+        </div>
+      </div>
+      <div class="float float-6" data-screens="notice">
+        <div class="ico">📢</div>
+        <div>
+          <div class="t">공지사항</div>
+          <div class="s">모앗 첫 배포</div>
+        </div>
+      </div>
+      <div class="float float-7" data-screens="photo">
+        <div class="ico">📷</div>
+        <div>
+          <div class="t">사진첩 업데이트</div>
+          <div class="s">새 사진 4장</div>
+        </div>
+      </div>
+      <div class="float float-8" data-screens="vote">
+        <div class="ico">🗳️</div>
+        <div>
+          <div class="t">모앗 투표 진행 중</div>
+          <div class="s">참석 100% · 1표</div>
+        </div>
+      </div>
+      <div class="float float-9" data-screens="member">
+        <div class="ico">👥</div>
+        <div>
+          <div class="t">회원 44명</div>
+          <div class="s">A조 7 · B조 15 · C조 9 · D조 13</div>
         </div>
       </div>
 
-      <div class="phone-wrap">
-        <div class="hero-card hero-card--notify">
-          <div class="hero-card__label">미납 알림 매일 자동</div>
-          <div class="hero-card__value">1명에게</div>
-        </div>
-
-        <div class="hero-card hero-card--dday">
-          <div class="hero-card__label">정모 참석 한 번 탭</div>
-          <div class="hero-card__value">2/24명</div>
-        </div>
-
-        <div class="phone">
-          <div class="phone-screen hero-screen">
-            <div class="phone-notch"></div>
-            <div class="placeholder-text">
-              <strong>홈 화면</strong>
-              <span>home.png</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-card hero-card--balance">
-          <div class="hero-card__label">토스로 한 번에 송금</div>
-          <div class="hero-card__value">+5,000원</div>
-        </div>
-
-        <div class="hero-card hero-card--members">
-          <div class="hero-card__label">매월 1일 자동 마감</div>
-          <div class="hero-card__value">209,098원</div>
+      <div class="phone">
+        <div class="phone-screen" id="phoneSlideshow">
+          <div class="slide active" data-screen="schedule"><img src="assets/schedule.png" alt="정모 일정" /></div>
+          <div class="slide" data-screen="guest"><img src="assets/guest-add.png" alt="게스트 추가" /></div>
+          <div class="slide" data-screen="payment"><img src="assets/payment.png" alt="회비" /></div>
+          <div class="slide" data-screen="court"><img src="assets/court.png" alt="코트 배치" /></div>
+          <div class="slide" data-screen="member"><img src="assets/guest.png" alt="회원 목록" /></div>
+          <div class="slide" data-screen="notice"><img src="assets/notice.png" alt="공지사항" /></div>
+          <div class="slide" data-screen="photo"><img src="assets/photo.png" alt="사진첩" /></div>
+          <div class="slide" data-screen="notification"><img src="assets/notification.png" alt="알림" /></div>
+          <div class="slide" data-screen="vote"><img src="assets/vote.png" alt="투표" /></div>
         </div>
       </div>
     </div>
   </div>
-</section>
+</header>
 
-<!-- PROBLEM -->
-<section>
-  <div class="container">
-    <div class="showcase-title">
-      <h2>이런 거, 한 번쯤 다 겪어보셨죠?</h2>
+<!-- PAIN -->
+<section class="pain-bg">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">운영진이라면</div>
+      <h2 class="h2">이런 거,<br/>한 번쯤 다 겪어보셨죠?</h2>
     </div>
 
-    <div class="problem-grid">
-      <div class="problem-card">
-        <div class="problem-num">01</div>
+    <div class="pain-grid reveal-stagger">
+      <div class="pain-card">
+        <div class="pain-num">01</div>
         <h3>한 달치 정산, 2시간</h3>
         <p>엑셀 시트를 켜고, 카톡 송금 내역을 되짚어 가며 하나씩 매칭합니다. 매달 반복되는 일입니다.</p>
       </div>
-      <div class="problem-card">
-        <div class="problem-num">02</div>
+      <div class="pain-card">
+        <div class="pain-num">02</div>
         <h3>또 "저 회비 냈는데요?"</h3>
         <p>같은 질문에 같은 답을 매달 다섯 번씩. 운영진의 시간이 그만큼 사라집니다.</p>
       </div>
-      <div class="problem-card">
-        <div class="problem-num">03</div>
+      <div class="pain-card">
+        <div class="pain-num">03</div>
         <h3>공지가 묻혀버려요</h3>
         <p>정모 시간, 투표 안내, 회비 마감이 단톡방 메시지 사이에 묻혀버립니다.</p>
       </div>
@@ -137,313 +196,337 @@
   </div>
 </section>
 
-<!-- FEATURES -->
-<section id="features" class="features">
-  <div class="container">
-    <div class="showcase-title">
-      <h2>운영, 이렇게 달라져요</h2>
+<!-- FEATURES (Storytelling) -->
+<section id="features">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">운영, 이렇게 달라져요</div>
+      <h2 class="h2">흩어진 도구를<br/>하나의 앱으로.</h2>
+      <p class="lede">정모·회비·코트·회원 관리까지. 동호회 운영에 필요한 모든 것.</p>
     </div>
+  </div>
+</section>
 
-    <div class="feat-blocks">
-      <div class="feat-block">
-        <div class="feat-block-visual">
-          <div class="feat-phone-large" data-img="schedule">
-            <div class="phone-screen">
-              <div class="phone-notch"></div>
-            </div>
-          </div>
-        </div>
-        <div class="feat-block-text">
-          <span class="feat-tag">정모 일정</span>
-          <h3>다음 정모, 모두가 알아요</h3>
-          <ul>
-            <li>홈 화면 가장 위에 D-Day 자동 표시</li>
-            <li>정모 임박 시 매일 오전 10시 자동 알림</li>
-            <li>참석·취소는 멤버가 직접 입력</li>
-          </ul>
-        </div>
+<!-- Story 1: 정모 -->
+<section class="story">
+  <div class="wrap-wide">
+    <div class="story-row reveal">
+      <div>
+        <span class="story-tag">정모 일정</span>
+        <h2>다음 정모,<br/><span class="accent">모두가 알아요.</span></h2>
+        <p class="lede">홈 화면 가장 위에 D-Day가 자동으로 떠요. 정모 전날 아침에는 참석자에게 자동 알림이 가니까, 다시 단톡방에 공지할 필요가 없어요.</p>
+        <ul class="story-points">
+          <li>홈 화면 가장 위에 D-Day 자동 표시</li>
+          <li>정모 전날 오전 10시, 참석자에게 자동 알림</li>
+          <li>참석·취소는 멤버가 직접 선택</li>
+        </ul>
       </div>
-
-      <div class="feat-block reverse">
-        <div class="feat-block-visual">
-          <div class="feat-phone-large" data-img="fee">
-            <div class="phone-screen">
-              <div class="phone-notch"></div>
-            </div>
-          </div>
-        </div>
-        <div class="feat-block-text">
-          <span class="feat-tag">회비 관리</span>
-          <h3>한 달 정산은 자동으로 끝나요</h3>
-          <ul>
-            <li>회비·게스트비·지출이 한 화면에 정리</li>
-            <li>납부일 지나면 미납자에게 매일 자동 알림</li>
-            <li>멤버는 토스로 한 번에 송금, 자동으로 기록</li>
-          </ul>
-        </div>
+      <div class="story-visual">
+        <div class="story-phone"><div class="scr"><img src="assets/schedule.png" alt="정모 일정 화면" /></div></div>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div class="feat-block">
-        <div class="feat-block-visual">
-          <div class="feat-phone-large" data-img="court">
-            <div class="phone-screen">
-              <div class="phone-notch"></div>
-            </div>
-          </div>
-        </div>
-        <div class="feat-block-text">
-          <span class="feat-tag">코트 배치</span>
-          <h3>오늘 누가 어느 코트에서?</h3>
-          <ul>
-            <li>정모 당일 코트별 게임 현황 실시간 공유</li>
-            <li>화이트보드와 메모지가 필요 없음</li>
-            <li>운영진과 멤버 모두 모바일로 함께 확인</li>
-          </ul>
-        </div>
+<!-- Story 2: 회비 -->
+<section class="story">
+  <div class="wrap-wide">
+    <div class="story-row reverse reveal">
+      <div>
+        <span class="story-tag">회비 관리</span>
+        <h2>한 달 정산,<br/><span class="accent">자동으로 끝나요.</span></h2>
+        <p class="lede">회비·게스트비·지출이 한 화면에. 납부일이 지나면 미납자에게 매일 자동으로 알림이 가요. 멤버는 토스로 한 번에 송금하면, 자동으로 기록돼요.</p>
+        <ul class="story-points">
+          <li>회비·게스트비·지출 한 화면 관리</li>
+          <li>미납자에게 매일 오후 9시 자동 알림</li>
+          <li>토스로 한 번에 송금, 자동 기록</li>
+        </ul>
       </div>
-
-      <div class="feat-block reverse">
-        <div class="feat-block-visual">
-          <div class="feat-phone-large" data-img="guest">
-            <div class="phone-screen">
-              <div class="phone-notch"></div>
-            </div>
-          </div>
-        </div>
-        <div class="feat-block-text">
-          <span class="feat-tag">회원 · 게스트</span>
-          <h3>회원도, 게스트도 한 앱에서</h3>
-          <ul>
-            <li>회원 A·B·C·D조 분류·이름 검색</li>
-            <li>게스트 신청·승인·방문 기록 관리</li>
-            <li>흩어진 엑셀 시트가 한 앱에 모임</li>
-          </ul>
-        </div>
+      <div class="story-visual gray">
+        <div class="story-phone"><div class="scr"><img src="assets/payment.png" alt="회비 관리 화면" /></div></div>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div class="feat-block">
-        <div class="feat-block-visual">
-          <div class="feat-phone-large" data-img="vote">
-            <div class="phone-screen">
-              <div class="phone-notch"></div>
-            </div>
-          </div>
-        </div>
-        <div class="feat-block-text">
-          <span class="feat-tag">투표 · 게시판</span>
-          <h3>단톡방 알림이 줄어듭니다</h3>
-          <ul>
-            <li>안건 투표, 공지·자유 게시판, 사진첩 통합</li>
-            <li>단톡방 알림이 한결 줄어듦</li>
-            <li>중요한 공지를 또렷하게 전달</li>
-          </ul>
-        </div>
+<!-- Story 3: 회원 관리 -->
+<section class="story">
+  <div class="wrap-wide">
+    <div class="story-row reveal">
+      <div>
+        <span class="story-tag">회원 관리</span>
+        <h2>회원 정보가,<br/><span class="accent">한눈에 들어와요.</span></h2>
+        <p class="lede">조별·성별로 색상 구분된 회원 목록. 이름 검색이나 조/성별 필터로 누구든 한 번에 찾을 수 있어요. 모임장 위임이나 총무 지정도 같은 화면에서 끝나요.</p>
+        <ul class="story-points">
+          <li>조·성별 통계 한 화면에</li>
+          <li>이름 검색·조별 필터 빠른 조회</li>
+          <li>모임장·총무 권한 부여까지 한 곳에서</li>
+        </ul>
       </div>
-
-      <div class="feat-block reverse">
-        <div class="feat-block-visual">
-          <div class="feat-phone-large" data-img="role">
-            <div class="phone-screen">
-              <div class="phone-notch"></div>
-            </div>
-          </div>
-        </div>
-        <div class="feat-block-text">
-          <span class="feat-tag">권한 분리</span>
-          <h3>운영진은 운영, 멤버는 참여</h3>
-          <ul>
-            <li>운영진은 관리 메뉴, 멤버는 참여 메뉴</li>
-            <li>역할에 맞는 화면만 자동으로 분리</li>
-            <li>실수로 잘못 누를 일이 없음</li>
-          </ul>
-        </div>
+      <div class="story-visual">
+        <div class="story-phone"><div class="scr"><img src="assets/guest.png" alt="회원 목록 화면" /></div></div>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div class="feat-block">
-        <div class="feat-block-visual">
-          <div class="feat-phone-large" data-img="alert">
-            <div class="phone-screen">
-              <div class="phone-notch"></div>
-            </div>
+<!-- Story 4: 코트 -->
+<section class="story">
+  <div class="wrap-wide">
+    <div class="story-row reverse reveal">
+      <div>
+        <span class="story-tag">코트 배치</span>
+        <h2>오늘 누가<br/><span class="accent">어느 코트에서?</span></h2>
+        <p class="lede">정모 당일 코트별 게임 현황을 실시간으로 공유해요. 화이트보드와 메모지가 필요 없습니다. 운영진과 멤버 모두 모바일로 같이 봐요.</p>
+        <ul class="story-points">
+          <li>코트별 게임 현황 실시간 공유</li>
+          <li>화이트보드·메모지 불필요</li>
+          <li>운영진·멤버 함께 확인</li>
+        </ul>
+      </div>
+      <div class="story-visual gray">
+        <div class="story-phone"><div class="scr"><img src="assets/court.png" alt="코트 배치 화면" /></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Story 5: 커뮤니티 -->
+<section class="story">
+  <div class="wrap-wide">
+    <div class="story-row reveal">
+      <div>
+        <span class="story-tag">커뮤니티</span>
+        <h2>공지와 사진이<br/><span class="accent">한 곳에 모여요.</span></h2>
+        <p class="lede">단톡방에 흩어지던 공지와 정모 사진을 앱 한 곳에 정리해요. 새 공지가 올라오면 자동 알림이 가고, 정모 사진은 한 번에 묶어 올릴 수 있어요.</p>
+        <ul class="story-points">
+          <li>중요 공지는 상단 고정·자동 푸시 알림</li>
+          <li>정모 사진 한 번에 업로드</li>
+          <li>게시판으로 자유로운 소통까지</li>
+        </ul>
+      </div>
+      <div class="story-visual">
+        <div class="story-phone">
+          <div class="scr scr-slides">
+            <img src="assets/notice.png" alt="공지사항 화면" />
+            <img src="assets/photo.png" alt="사진첩 화면" />
           </div>
-        </div>
-        <div class="feat-block-text">
-          <span class="feat-tag">알림 발송</span>
-          <h3>단톡방으로 안 보내도 돼요</h3>
-          <ul>
-            <li>미납자: 매일 12시 자동 알림</li>
-            <li>정모: 매일 오전 10시 자동 알림</li>
-            <li>새 공지·투표도 자동 푸시 발송</li>
-          </ul>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- DEEP DIVE -->
-<section class="deep-dive">
-  <div class="container">
-    <div class="showcase-title">
-      <h2>운영진과 멤버, 함께 쓰는 앱</h2>
+<!-- Story 6: 투표 -->
+<section class="story">
+  <div class="wrap-wide">
+    <div class="story-row reverse reveal">
+      <div>
+        <span class="story-tag">투표</span>
+        <h2>의견 모으기,<br/><span class="accent">한 번에 끝.</span></h2>
+        <p class="lede">정모 일정, 안건 결정, 단체복 디자인까지. 투표를 만들면 모든 멤버에게 알림이 가고, 결과가 실시간으로 집계돼요.</p>
+        <ul class="story-points">
+          <li>복수 선택·익명 투표 옵션 지원</li>
+          <li>마감일 설정 시 자동 종료</li>
+          <li>새 투표 등록 시 멤버 전체에 푸시 알림</li>
+        </ul>
+      </div>
+      <div class="story-visual gray">
+        <div class="story-phone"><div class="scr"><img src="assets/vote.png" alt="투표 화면" /></div></div>
+      </div>
     </div>
-    <p class="dive-lead">
-      대부분의 동호회 도구는 <strong>운영진만</strong> 씁니다.<br>
-      모앗은 멤버까지 함께 쓰도록 만들었습니다.
-    </p>
+  </div>
+</section>
 
-    <div class="dive-grid">
-      <div class="dive-card">
-        <div class="dive-phone" data-img="unpaid">
-          <div class="phone-screen">
-            <div class="phone-notch"></div>
-          </div>
-        </div>
-        <span class="dive-tag tag-admin">운영진을 위해</span>
+<!-- Story 7: 알림 (마지막) -->
+<section class="story story-last">
+  <div class="wrap-wide">
+    <div class="story-row reveal">
+      <div>
+        <span class="story-tag">알림 발송</span>
+        <h2>단톡방으로<br/><span class="accent">안 보내도 돼요.</span></h2>
+        <p class="lede">미납자, 정모, 새 공지, 투표까지. 필요한 알림은 앱이 자동으로 보내요. 단톡방 알림 피로도가 한결 줄어듭니다.</p>
+        <ul class="story-points">
+          <li>미납자에게 매일 오후 9시 자동 알림</li>
+          <li>정모 전날 오전 10시 자동 알림</li>
+          <li>새 공지·투표도 자동 푸시 발송</li>
+        </ul>
+      </div>
+      <div class="story-visual">
+        <div class="story-phone"><div class="scr"><img src="assets/notification.png" alt="알림 화면" /></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DUO -->
+<section class="duo-bg">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">함께 쓰는 앱</div>
+      <h2 class="h2">운영진과 멤버,<br/>같이 쓰도록 만들었어요.</h2>
+      <p class="lede">대부분의 동호회 도구는 운영진만 씁니다. 모앗은 멤버까지 함께 쓰도록 설계했어요.</p>
+    </div>
+
+    <div class="duo-grid reveal-stagger">
+      <div class="duo-card">
+        <span class="role">운영진을 위해</span>
         <h3>미납자, 한눈에 보여요</h3>
-        <p>누가 냈고 누가 안 냈는지 한 줄로. 납부일 지나면 매일 자동으로 알림이 가니, 운영진이 직접 보낼 필요가 없습니다.</p>
-        <div class="dive-stat">
-          <span class="dive-stat-num">2시간 → 1분</span>
-          <span class="dive-stat-label">월 정산 시간</span>
+        <p>누가 냈고 누가 안 냈는지 한 줄로 보여요. 납부일이 지나면 매일 자동으로 알림이 가니까, 운영진이 직접 챙길 필요가 없어요.</p>
+        <div class="duo-stat">
+          <div class="from">2시간</div>
+          <div class="num">→ <span data-count="1" data-suffix="분">0분</span></div>
+          <div class="label">월 정산 시간</div>
         </div>
       </div>
-
-      <div class="dive-card">
-        <div class="dive-phone" data-img="payment">
-          <div class="phone-screen">
-            <div class="phone-notch"></div>
-          </div>
-        </div>
-        <span class="dive-tag tag-member">멤버를 위해</span>
-        <h3>내 회비, 직접 보고 보내요</h3>
-        <p>납부 현황을 앱에서 바로 확인. 토스로 한 번에 송금하면 자동 기록됩니다.</p>
-        <div class="dive-stat">
-          <span class="dive-stat-num">3초</span>
-          <span class="dive-stat-label">회비 송금에 걸리는 시간</span>
+      <div class="duo-card">
+        <span class="role">멤버를 위해</span>
+        <h3>내 회비, 직접 보내요</h3>
+        <p>납부 현황을 앱에서 바로 확인할 수 있어요. 토스로 한 번에 송금하면, 자동으로 기록까지 끝나요.</p>
+        <div class="duo-stat">
+          <div class="num"><span data-count="3" data-suffix="초">0초</span></div>
+          <div class="label">회비 송금에 걸리는 시간</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- COMPARISON -->
+<!-- COMPARE -->
 <section id="compare">
-  <div class="container">
-    <div class="showcase-title">
-      <h2>왜 모앗인가</h2>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">비교</div>
+      <h2 class="h2">왜 모앗인가요?</h2>
     </div>
 
-    <div class="compare-table">
-      <div class="compare-row head">
-        <div class="compare-cell">기능</div>
-        <div class="compare-cell">단톡방 + 엑셀</div>
-        <div class="compare-cell">기존 운영 도구</div>
-        <div class="compare-cell moat">모앗</div>
-      </div>
-      <div class="compare-row">
-        <div class="compare-cell feat-name">모바일 앱</div>
-        <div class="compare-cell"><span class="icon-n">✗</span> 없음</div>
-        <div class="compare-cell"><span class="icon-p">△</span> 웹 위주</div>
-        <div class="compare-cell moat"><span class="icon-y">✓</span> iOS / Android</div>
-      </div>
-      <div class="compare-row">
-        <div class="compare-cell feat-name">멤버도 직접 사용</div>
-        <div class="compare-cell"><span class="icon-p">△</span> 카톡으로만</div>
-        <div class="compare-cell"><span class="icon-n">✗</span> 운영진 위주</div>
-        <div class="compare-cell moat"><span class="icon-y">✓</span> 모두 함께</div>
-      </div>
-      <div class="compare-row">
-        <div class="compare-cell feat-name">코트 배치 / 게임 운영</div>
-        <div class="compare-cell"><span class="icon-n">✗</span> 화이트보드</div>
-        <div class="compare-cell"><span class="icon-n">✗</span> 없음</div>
-        <div class="compare-cell moat"><span class="icon-y">✓</span> 실시간</div>
-      </div>
-      <div class="compare-row">
-        <div class="compare-cell feat-name">투표 / 공지</div>
-        <div class="compare-cell"><span class="icon-n">✗</span> 단톡방 알림 누적</div>
-        <div class="compare-cell"><span class="icon-p">△</span> 일부</div>
-        <div class="compare-cell moat"><span class="icon-y">✓</span> 앱 내 통합</div>
-      </div>
-      <div class="compare-row">
-        <div class="compare-cell feat-name">알림 발송</div>
-        <div class="compare-cell"><span class="icon-n">✗</span> 단톡방 직접</div>
-        <div class="compare-cell"><span class="icon-p">△</span> 일부</div>
-        <div class="compare-cell moat"><span class="icon-y">✓</span> 자동 푸시</div>
-      </div>
-      <div class="compare-row">
-        <div class="compare-cell feat-name">가격</div>
-        <div class="compare-cell"><span class="icon-y">✓</span> 무료</div>
-        <div class="compare-cell"><span class="icon-p">△</span> 유료 가능</div>
-        <div class="compare-cell moat"><span class="icon-y">✓</span> 무료, 광고 없음</div>
-      </div>
+    <div class="cmp-wrap reveal">
+      <table class="cmp">
+        <thead>
+          <tr>
+            <th>기능</th>
+            <th>단톡방 + 엑셀</th>
+            <th>기존 운영 도구</th>
+            <th class="us">모앗</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>모바일 앱</td>
+            <td><span class="mark no"><span class="mark-ico">✕</span>없음</span></td>
+            <td><span class="mark mid"><span class="mark-ico">~</span>웹 위주</span></td>
+            <td class="us"><span class="mark ok"><span class="mark-ico">✓</span>iOS · Android</span></td>
+          </tr>
+          <tr>
+            <td>멤버도 직접 사용</td>
+            <td><span class="mark mid"><span class="mark-ico">~</span>카톡으로만</span></td>
+            <td><span class="mark no"><span class="mark-ico">✕</span>운영진 위주</span></td>
+            <td class="us"><span class="mark ok"><span class="mark-ico">✓</span>모두 함께</span></td>
+          </tr>
+          <tr>
+            <td>코트 배치 · 게임 운영</td>
+            <td><span class="mark no"><span class="mark-ico">✕</span>화이트보드</span></td>
+            <td><span class="mark no"><span class="mark-ico">✕</span>없음</span></td>
+            <td class="us"><span class="mark ok"><span class="mark-ico">✓</span>실시간</span></td>
+          </tr>
+          <tr>
+            <td>공지 · 투표 · 사진</td>
+            <td><span class="mark no"><span class="mark-ico">✕</span>단톡방 묻힘</span></td>
+            <td><span class="mark mid"><span class="mark-ico">~</span>일부</span></td>
+            <td class="us"><span class="mark ok"><span class="mark-ico">✓</span>앱 내 통합</span></td>
+          </tr>
+          <tr>
+            <td>회원 목록 · 관리</td>
+            <td><span class="mark no"><span class="mark-ico">✕</span>엑셀</span></td>
+            <td><span class="mark mid"><span class="mark-ico">~</span>웹 위주</span></td>
+            <td class="us"><span class="mark ok"><span class="mark-ico">✓</span>앱에서 바로</span></td>
+          </tr>
+          <tr>
+            <td>알림 발송</td>
+            <td><span class="mark no"><span class="mark-ico">✕</span>단톡방 직접</span></td>
+            <td><span class="mark mid"><span class="mark-ico">~</span>일부</span></td>
+            <td class="us"><span class="mark ok"><span class="mark-ico">✓</span>자동 푸시</span></td>
+          </tr>
+          <tr>
+            <td>가격</td>
+            <td><span class="mark ok"><span class="mark-ico">✓</span>무료</span></td>
+            <td><span class="mark mid"><span class="mark-ico">~</span>유료 가능</span></td>
+            <td class="us"><span class="mark ok"><span class="mark-ico">✓</span>무료, 광고 없음</span></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section id="faq" class="features">
-  <div class="container">
-    <div class="showcase-title">
-      <h2>자주 묻는 질문</h2>
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">FAQ</div>
+      <h2 class="h2">자주 묻는 질문</h2>
     </div>
 
-    <div class="faq-list">
-      <details class="faq-item">
+    <div class="reveal">
+      <details class="faq" open>
         <summary>모앗은 무료인가요?</summary>
-        <p>네, 완전히 무료입니다. 광고도 없습니다. 향후 일부 고급 기능에 한해 유료 옵션이 생길 수 있지만, 핵심 기능은 계속 무료로 제공됩니다.</p>
+        <div class="ans-wrap"><div class="ans-inner">네, 완전히 무료입니다. 광고도 없습니다. 향후 일부 고급 기능에 한해 유료 옵션이 생길 수 있지만, 핵심 기능은 계속 무료로 제공됩니다.</div></div>
       </details>
-      <details class="faq-item">
+      <details class="faq">
         <summary>iOS와 안드로이드 모두 지원하나요?</summary>
-        <p>네, App Store와 Google Play 모두에서 다운로드 가능합니다. 두 플랫폼 모두 동일한 기능을 제공합니다.</p>
+        <div class="ans-wrap"><div class="ans-inner">네, App Store와 Google Play 모두에서 다운로드 가능합니다. 두 플랫폼 모두 동일한 기능을 제공합니다.</div></div>
       </details>
-      <details class="faq-item">
+      <details class="faq">
         <summary>모임 인원 제한이 있나요?</summary>
-        <p>인원 제한 없이 사용 가능합니다. 10명 단위 소모임부터 100명 넘는 대형 모임까지 모두 지원합니다.</p>
+        <div class="ans-wrap"><div class="ans-inner">인원 제한 없이 사용 가능합니다. 10명 단위 소모임부터 100명 넘는 대형 모임까지 모두 지원합니다.</div></div>
       </details>
-      <details class="faq-item">
+      <details class="faq">
         <summary>기존 엑셀 데이터를 옮길 수 있나요?</summary>
-        <p>현재는 직접 입력 방식입니다. 엑셀 일괄 가져오기 기능은 사용자 의견을 받아 우선순위로 검토하고 있습니다.</p>
+        <div class="ans-wrap"><div class="ans-inner">현재는 직접 입력 방식입니다. 엑셀 일괄 가져오기 기능은 사용자 의견을 받아 우선순위로 검토하고 있습니다.</div></div>
       </details>
-      <details class="faq-item">
+      <details class="faq">
         <summary>운영진과 일반 멤버의 차이는 무엇인가요?</summary>
-        <p>운영진은 회비 관리, 일정 등록, 게스트 승인 등 모임 운영 권한을 가집니다. 일반 멤버는 정모 신청, 본인 회비 확인, 투표 참여 등을 할 수 있습니다.</p>
+        <div class="ans-wrap"><div class="ans-inner">운영진은 회비 관리, 일정 등록, 게스트 승인 등 모임 운영 권한을 가집니다. 일반 멤버는 정모 신청, 본인 회비 확인, 투표 참여 등을 할 수 있습니다.</div></div>
       </details>
-      <details class="faq-item">
+      <details class="faq">
         <summary>도입은 어떻게 시작하나요?</summary>
-        <p>운영진 한 분이 앱을 설치하고 모임을 만든 뒤, 초대코드를 공유하면 됩니다. 멤버들은 코드로 입장만 하면 끝입니다.</p>
+        <div class="ans-wrap"><div class="ans-inner">운영진 한 분이 앱을 설치하고 모임을 만든 뒤, 초대코드를 공유하면 됩니다. 멤버들은 코드로 입장만 하면 끝입니다.</div></div>
       </details>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
-<section>
-  <div class="final-cta">
-    <h2>이제 운영은<br>모앗에 맡기세요</h2>
-    <p>1분이면 첫 모임을 시작할 수 있어요.</p>
-    <div class="hero-cta">
-      <a class="store-badge" data-store="apple" href="https://apps.apple.com/kr/app/id6761710550" aria-label="App Store에서 다운로드">
-        <img src="assets/appstore-badge.svg" alt="Download on the App Store">
-      </a>
-      <a class="store-badge" data-store="google" href="https://play.google.com/store/apps/details?id=com.moat.moat_app" aria-label="Google Play에서 다운로드">
-        <img src="assets/googleplay-badge.png" alt="Google Play에서 다운로드">
-      </a>
-    </div>
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-dots"></div>
+  <div class="cta-mark" aria-hidden="true">
+    <svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+      <text x="200" y="100" text-anchor="middle" font-family="Pretendard Variable, Pretendard, sans-serif" font-weight="900" font-size="120" letter-spacing="-6" fill="currentColor">Moat</text>
+    </svg>
+  </div>
+
+  <div class="wrap cta-inner reveal">
+    <h2>이제,<br/>동호회는 모앗으로.</h2>
+    <p>정모, 회비, 코트 배치까지<br/>한 앱에서.</p>
+    <a class="cta-pill" href="#" id="scrollTopBtn">
+      <span>앱 받으러 가기</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </a>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <div class="container footer-inner">
-    <div class="footer-left">© 2026 Moat. 모임 관리 앱.</div>
-    <div class="footer-links">
-      <a href="https://apps.apple.com/kr/app/id6761710550">App Store</a>
-      <a href="https://play.google.com/store/apps/details?id=com.moat.moat_app">Google Play</a>
-    </div>
+  <div class="wrap foot-inner">
+    <div class="foot-copy">© 2026 Moat. All rights reserved.</div>
+    <div class="foot-credit">Designed &amp; developed by <strong>LEE JUNSEOK</strong></div>
   </div>
 </footer>
 
-<script src="script.js" defer></script>
+<!-- Scripts: 각 책임별로 분리. defer로 비차단 로드 -->
+<script src="scripts/nav.js" defer></script>
+<script src="scripts/reveal.js" defer></script>
+<script src="scripts/counter.js" defer></script>
+<script src="scripts/slideshow.js" defer></script>
 
 </body>
 </html>
