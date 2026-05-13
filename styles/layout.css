@@ -25,12 +25,6 @@
   transition: color .15s, background .15s;
 }
 .nav-links a:hover { color: var(--ink); background: var(--line-soft); }
-.nav-cta {
-  background: var(--ink) !important; color: #fff !important;
-  padding: 12px 20px !important;
-  margin-left: 8px;
-}
-.nav-cta:hover { background: #000 !important; color: #fff !important; }
 
 /* HERO */
 .hero {
@@ -394,7 +388,7 @@ footer { background: var(--bg-gray); padding: 48px 0 56px; border-top: 1px solid
   section, .duo-bg { padding: 72px 0; }
   .story { padding: 40px 0; }
   .cta-section { padding: 80px 0; }
-  .nav-links a:not(.nav-cta) { display: none; }
+  .nav-links a { display: none; }
   .hero-visual { height: 600px; }
   .duo-card { padding: 36px 28px; }
 }
@@ -407,7 +401,6 @@ footer { background: var(--bg-gray); padding: 48px 0 56px; border-top: 1px solid
   .nav-inner { height: 60px; }
   .brand { font-size: 19px; }
   .brand-mark { width: 28px; height: 28px; }
-  .nav-cta { padding: 9px 16px !important; font-size: 14px; }
 
   /* Hero */
   .hero { padding: 32px 0 48px; }
@@ -449,12 +442,17 @@ footer { background: var(--bg-gray); padding: 48px 0 56px; border-top: 1px solid
   .float .ico svg { width: 16px; height: 16px; }
   .float .t { font-size: 11.5px; }
   .float .s { font-size: 10px; margin-top: 1px; }
-  .float-1 { top: 30px; left: 0; }
-  .float-2 { top: auto; bottom: 200px; left: 0; }
-  .float-3 { bottom: 30px; left: 0; }
-  .float-4 { top: 20px; right: 0; }
-  .float-5 { bottom: 30px; right: 0; }
-  .float-6, .float-7, .float-8, .float-9 { display: none; }
+  /* 9개 chip 모두 노출 (각 슬라이드 화면에 매칭됨). 폰 좌우에 분산 배치
+     동시에 하나만 노출(slideshow.js의 .dimmed 처리)되므로 겹쳐 있어도 시각적으론 1개씩만 보임 */
+  .float-1 { top: 30px; left: 0; bottom: auto; right: auto; }
+  .float-2 { top: 130px; left: 0; bottom: auto; right: auto; }
+  .float-3 { top: 230px; left: 0; bottom: auto; right: auto; }
+  .float-8 { top: 330px; left: 0; bottom: auto; right: auto; }
+  .float-9 { top: 430px; left: 0; bottom: auto; right: auto; }
+  .float-4 { top: 30px; right: 0; bottom: auto; left: auto; }
+  .float-5 { top: 150px; right: 0; bottom: auto; left: auto; }
+  .float-6 { top: 270px; right: 0; bottom: auto; left: auto; }
+  .float-7 { top: 390px; right: 0; bottom: auto; left: auto; }
   .phone { width: 248px; height: 518px; border-radius: 40px; padding: 9px; }
   .phone::before { width: 80px; height: 22px; }
   .phone-screen { border-radius: 32px; }
