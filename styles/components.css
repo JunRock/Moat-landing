@@ -499,23 +499,34 @@ details.faq .ans-inner {
   pointer-events: auto;
 }
 .floating-cta:active { background: #000; }
-@media (max-width: 720px) {
+@media (max-width: 980px) {
   .floating-cta { display: inline-flex; }
 }
 
-/* CTA pill */
+/* CTA pill — 배경 데코 위에 확실히 떠 있게 z-index + 더 진한 그림자 */
 .cta-pill {
+  position: relative;
+  z-index: 2;
   display: inline-flex; align-items: center; gap: 12px;
   margin-top: 40px;
   padding: 20px 32px;
-  background: #fff; color: var(--ink);
+  background: #fff;
+  background-color: #fff;
+  color: var(--ink);
   border-radius: 999px;
   font-size: 17px; font-weight: 700;
   letter-spacing: -0.02em;
   text-decoration: none;
-  box-shadow: 0 20px 40px -12px rgba(10,30,80,0.35);
+  box-shadow:
+    0 24px 48px -12px rgba(10, 14, 22, 0.45),
+    0 10px 20px -8px rgba(10, 14, 22, 0.25);
   transition: transform .2s ease, box-shadow .2s ease;
 }
-.cta-pill:hover { transform: translateY(-2px); box-shadow: 0 28px 50px -12px rgba(10,30,80,0.45); }
+.cta-pill:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 32px 60px -12px rgba(10, 14, 22, 0.55),
+    0 14px 24px -10px rgba(10, 14, 22, 0.3);
+}
 .cta-pill svg { color: var(--blue); transition: transform .25s ease; }
 .cta-pill:hover svg { transform: translateY(-3px); }

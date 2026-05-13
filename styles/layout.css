@@ -152,6 +152,9 @@
 .pain-card p { color: var(--ink-2); font-size: 16px; line-height: 1.6; }
 
 /* STORY (big feature blocks) - Toss-style light card */
+/* 데스크톱: 세로 스택. 모바일: 가로 캐러셀 (.stories-track inside @media) */
+.stories-track { display: contents; }
+.stories-dots-wrap { display: none; }
 .story { padding: 50px 0; overflow-x: clip; }
 .story + .story { padding-top: 0; }
 .story-row {
@@ -311,6 +314,7 @@ table.cmp tbody tr:hover td.us { background: var(--blue-100); }
   width: 600px; height: 600px; border-radius: 50%;
   background: radial-gradient(circle, rgba(255,255,255,0.35) 0%, transparent 65%);
   filter: blur(40px);
+  pointer-events: none;
 }
 .cta-section::after {
   content: ""; position: absolute;
@@ -318,6 +322,7 @@ table.cmp tbody tr:hover td.us { background: var(--blue-100); }
   width: 700px; height: 700px; border-radius: 50%;
   background: radial-gradient(circle, oklch(0.45 0.22 260) 0%, transparent 60%);
   filter: blur(60px);
+  pointer-events: none;
 }
 .cta-dots {
   position: absolute; inset: 0;
@@ -337,7 +342,7 @@ table.cmp tbody tr:hover td.us { background: var(--blue-100); }
   color: #fff;
 }
 .cta-mark svg { width: 100%; height: auto; display: block; }
-.cta-inner { text-align: center; position: relative; max-width: 760px; }
+.cta-inner { text-align: center; position: relative; z-index: 2; max-width: 760px; }
 .cta-inner h2 {
   color: #fff;
   font-size: clamp(40px, 5.4vw, 68px); line-height: 1.05;
@@ -434,7 +439,22 @@ footer { background: var(--bg-gray); padding: 48px 0 56px; border-top: 1px solid
   }
   .hero-ctas .btn svg { width: 18px; height: 18px; flex: none; }
   .hero-visual { height: 540px; }
-  .float { display: none; }
+  /* 모바일에선 플로팅 칩을 작게 + 일부만 노출해 폰 목업과의 충돌 방지 */
+  .float {
+    padding: 8px 12px 8px 8px;
+    gap: 8px;
+    border-radius: 14px;
+  }
+  .float .ico { width: 30px; height: 30px; border-radius: 9px; }
+  .float .ico svg { width: 16px; height: 16px; }
+  .float .t { font-size: 11.5px; }
+  .float .s { font-size: 10px; margin-top: 1px; }
+  .float-1 { top: 30px; left: 0; }
+  .float-2 { top: auto; bottom: 200px; left: 0; }
+  .float-3 { bottom: 30px; left: 0; }
+  .float-4 { top: 20px; right: 0; }
+  .float-5 { bottom: 30px; right: 0; }
+  .float-6, .float-7, .float-8, .float-9 { display: none; }
   .phone { width: 248px; height: 518px; border-radius: 40px; padding: 9px; }
   .phone::before { width: 80px; height: 22px; }
   .phone-screen { border-radius: 32px; }
@@ -450,12 +470,61 @@ footer { background: var(--bg-gray); padding: 48px 0 56px; border-top: 1px solid
   .h2 { font-size: clamp(28px, 7.5vw, 40px); }
   .eyebrow { font-size: 17px; margin-bottom: 14px; }
 
-  /* Story */
-  .story { padding: 30px 0; }
-  .story-row { gap: 28px; padding: 40px 28px; border-radius: 24px; }
-  .story h2 { font-size: clamp(28px, 7.5vw, 40px); margin-bottom: 18px; }
-  .story p.lede { font-size: 16.5px; }
-  .story-points li { font-size: 15.5px; }
+  /* Story: 모바일 가로 캐러셀 */
+  .stories-track {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 12px;
+    /* 좌우 padding으로 첫·마지막 카드 중앙 정렬되도록 */
+    padding: 0 16px 8px;
+    scroll-padding: 0 16px;
+  }
+  .stories-track::-webkit-scrollbar { display: none; }
+  .stories-track > .story {
+    /* 카드 폭을 viewport의 88%로 → 우측에 다음 카드가 살짝 peek됨 ("더 있음" 시그널) */
+    flex: 0 0 88%;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;  /* 한 번에 한 카드씩만 넘김 (실제 카드 플립 느낌) */
+    padding: 0;
+  }
+  /* 카드 스택 효과: 옆 카드는 작고 흐릿하게, 활성 카드만 또렷 */
+  .stories-track > .story .story-row {
+    transition: transform .4s cubic-bezier(.2,.7,.3,1), opacity .4s ease;
+    transform: scale(0.92);
+    opacity: 0.55;
+    transform-origin: center center;
+  }
+  .stories-track > .story.is-active-card .story-row {
+    transform: scale(1);
+    opacity: 1;
+  }
+  .stories-track > .story + .story { padding-top: 0; }
+  .stories-track > .story .wrap-wide { padding: 0; }
+  .stories-dots-wrap { display: flex; justify-content: center; padding: 16px 0 12px; }
+  .stories-dots-wrap--top { padding: 0 0 16px; }
+  .stories-dots { display: flex; gap: 8px; }
+  .stories-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--line);
+    border: 0; padding: 0;
+    cursor: pointer;
+    transition: background .2s, width .2s, border-radius .2s;
+  }
+  .stories-dot.is-active {
+    background: var(--ink);
+    width: 24px;
+    border-radius: 999px;
+  }
+  .story { padding: 8px 0; }
+  .story-row { gap: 24px; padding: 32px 24px; border-radius: 22px; }
+  .story h2 { font-size: clamp(26px, 7vw, 36px); margin-bottom: 16px; }
+  .story p.lede { font-size: 15.5px; }
+  .story-points li { font-size: 15px; }
   .story-phone { width: 240px; height: 501px; border-radius: 36px; padding: 8px; }
   .story-phone::before { width: 76px; height: 22px; }
   .story-phone .scr { border-radius: 30px; }

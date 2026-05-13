@@ -1,18 +1,10 @@
-// 모바일 플로팅 CTA: hero 지나면 노출, 플랫폼별 스토어 링크 자동 설정
-// 설정값은 scripts/config.js의 window.MoatConfig
+// 모바일 플로팅 CTA: hero 지나면 노출
+// 클릭 시 hero의 #download 영역으로 스크롤 (App Store / Play Store 두 버튼이 함께 있는 곳)
+// → 사용자가 직접 자기 OS에 맞는 스토어 선택
 (function () {
   const cta = document.getElementById('floatingCta');
   const hero = document.querySelector('.hero');
   if (!cta || !hero) return;
-
-  const config = window.MoatConfig || {};
-  const ua = navigator.userAgent || '';
-  if (/android/i.test(ua) && config.playStore) {
-    cta.href = config.playStore;
-  } else if (/iphone|ipad|ipod/i.test(ua) && !window.MSStream && config.appStore) {
-    cta.href = config.appStore;
-  }
-  // 그 외는 기본 #download 유지
 
   let ticking = false;
   function update() {
