@@ -10,15 +10,6 @@
   @keyframes pulseDot { 0%, 100% { box-shadow: 0 0 0 0 rgba(49,130,246,0); } 50% { box-shadow: 0 0 0 8px rgba(49,130,246,0.15); } }
   @keyframes blobDrift { 0%, 100% { transform: translate(-50%, 0) scale(1); } 50% { transform: translate(-48%, 30px) scale(1.05); } }
   @keyframes blobRotate { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-  @keyframes cardFloatA {
-    0%, 100% { transform: rotate(-9deg) translateY(0); }
-    50% { transform: rotate(-7deg) translateY(-12px); }
-  }
-  @keyframes cardFloatB {
-    0%, 100% { transform: rotate(8deg) translateY(0); }
-    50% { transform: rotate(6deg) translateY(-14px); }
-  }
-  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
   @keyframes scrFadeA {
     0%, 42% { opacity: 1; }
     50%, 92% { opacity: 0; }
@@ -59,24 +50,7 @@
   .scr-slides img:nth-child(1) { animation: scrFadeA 7s ease-in-out infinite; }
   .scr-slides img:nth-child(2) { animation: scrFadeB 7s ease-in-out infinite; }
 
-  /* 스토리 폰 진입(좌우 회전 유지) */
-  .story-row .story-phone {
-    opacity: 0;
-    transform: rotate(-3deg) translateY(24px);
-    transition: opacity .7s ease, transform .7s ease;
-  }
-  .story-row.reverse .story-phone {
-    transform: rotate(3deg) translateY(24px);
-  }
-  .story-row.in .story-phone {
-    opacity: 1;
-    transform: rotate(-3deg) translateY(0);
-    transition-delay: .1s;
-  }
-  .story-row.reverse.in .story-phone {
-    transform: rotate(3deg) translateY(0);
-  }
-  .story-row:hover.in .story-phone { transform: rotate(0deg) translateY(0); }
+  /* 스토리 폰: 카드 자체 애니메이션과 겹치지 않도록 자체 애니메이션 없음 */
 
   /* Scroll reveal */
   .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
@@ -87,9 +61,41 @@
   .reveal-stagger.in > *:nth-child(3) { transition-delay: .25s; }
   .reveal-stagger.in > *:nth-child(4) { transition-delay: .35s; }
   .reveal-stagger.in > * { opacity: 1; transform: translateY(0); }
+
+  /* Story 카드: 양쪽 사이드에서 슬라이드인 */
+  @keyframes storySlideInLeft {
+    from { opacity: 0; transform: translateX(-80px) scale(0.96); }
+    to { opacity: 1; transform: translateX(0) scale(1); }
+  }
+  @keyframes storySlideInRight {
+    from { opacity: 0; transform: translateX(80px) scale(0.96); }
+    to { opacity: 1; transform: translateX(0) scale(1); }
+  }
+  .story-row.reveal { opacity: 0; }
+  .story-row.reveal.in:not(.settled) {
+    animation: storySlideInLeft .9s cubic-bezier(.2,.7,.2,1) forwards;
+  }
+  .story-row.reverse.reveal.in:not(.settled) {
+    animation: storySlideInRight .9s cubic-bezier(.2,.7,.2,1) forwards;
+  }
+}
+
+/* 슬라이드인 끝난 후: 애니메이션 해제하고 hover transition 활성화 */
+.story-row.settled {
+  animation: none;
+  opacity: 1;
+  transform: none;
+}
+.story-row {
+  transition: transform .25s cubic-bezier(.2,.7,.3,1), box-shadow .25s ease;
+}
+@media (hover: hover) {
+  .story-row.settled:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 32px 64px -24px rgba(25, 31, 40, 0.12),
+      0 12px 24px -10px rgba(25, 31, 40, 0.06);
+  }
 }
 
 /* prefers-reduced-motion: 사용자가 모션 줄이기 선호 시 정적 상태 유지 */
-.story-row .story-phone { transform: rotate(-3deg); transition: transform .4s ease; }
-.story-row.reverse .story-phone { transform: rotate(3deg); }
-.story-row:hover .story-phone { transform: rotate(0deg); }
