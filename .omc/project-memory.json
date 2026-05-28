@@ -1,0 +1,108 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1779975198872,
+  "projectRoot": "/Users/junseok/IdeaProjects/moat-landing",
+  "techStack": {
+    "languages": [],
+    "frameworks": [],
+    "packageManager": null,
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "assets",
+      "scripts"
+    ],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "assets": {
+      "path": "assets",
+      "purpose": "Static assets",
+      "fileCount": 18,
+      "lastAccessed": 1779975198855,
+      "keyFiles": [
+        "appstore-badge.svg",
+        "court.png",
+        "fee.png",
+        "googleplay-badge.png",
+        "guest-add.png"
+      ]
+    },
+    "scripts": {
+      "path": "scripts",
+      "purpose": "Build/utility scripts",
+      "fileCount": 8,
+      "lastAccessed": 1779975198855,
+      "keyFiles": [
+        "config.js",
+        "contact.js",
+        "counter.js",
+        "floating-cta.js",
+        "nav.js"
+      ]
+    },
+    "styles": {
+      "path": "styles",
+      "purpose": null,
+      "fileCount": 5,
+      "lastAccessed": 1779975198856,
+      "keyFiles": [
+        "animations.css",
+        "base.css",
+        "components.css",
+        "layout.css",
+        "tokens.css"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "index.html",
+      "accessCount": 6,
+      "lastAccessed": 1779975532054,
+      "type": "file"
+    },
+    {
+      "path": "styles/layout.css",
+      "accessCount": 6,
+      "lastAccessed": 1779975600747,
+      "type": "file"
+    },
+    {
+      "path": "styles/tokens.css",
+      "accessCount": 3,
+      "lastAccessed": 1779975370442,
+      "type": "file"
+    },
+    {
+      "path": "styles/components.css",
+      "accessCount": 1,
+      "lastAccessed": 1779975273562,
+      "type": "file"
+    },
+    {
+      "path": "styles/base.css",
+      "accessCount": 1,
+      "lastAccessed": 1779975283304,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

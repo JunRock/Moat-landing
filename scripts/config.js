@@ -5,6 +5,10 @@ window.MoatConfig = {
   appStore: 'https://apps.apple.com/kr/app/id6761710550',
   playStore: 'https://play.google.com/store/apps/details?id=com.moat.moat_app',
 
+  // 소셜
+  instagramUrl: 'https://www.instagram.com/moat.official.app/',
+  instagramHandle: '@moat.official.app',
+
   // 문의 채널: Slack Incoming Webhook
   // 새 웹훅 발급은 Slack → Tools → Manage apps → "Incoming Webhooks"
   slackWebhookUrl: 'https://hooks.slack.com/services/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',
