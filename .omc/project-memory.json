@@ -74,27 +74,27 @@
   },
   "hotPaths": [
     {
-      "path": "index.html",
-      "accessCount": 22,
-      "lastAccessed": 1780315335808,
+      "path": "styles/layout.css",
+      "accessCount": 23,
+      "lastAccessed": 1780319444443,
       "type": "file"
     },
     {
-      "path": "styles/layout.css",
-      "accessCount": 20,
-      "lastAccessed": 1780318757823,
+      "path": "index.html",
+      "accessCount": 23,
+      "lastAccessed": 1780319509997,
       "type": "file"
     },
     {
       "path": "features.html",
-      "accessCount": 15,
-      "lastAccessed": 1780316878259,
+      "accessCount": 16,
+      "lastAccessed": 1780319467870,
       "type": "file"
     },
     {
       "path": "faq.html",
-      "accessCount": 6,
-      "lastAccessed": 1780315654353,
+      "accessCount": 7,
+      "lastAccessed": 1780319486589,
       "type": "file"
     },
     {

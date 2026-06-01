@@ -179,7 +179,7 @@
 
 /* PAGE HERO (서브 페이지 상단) */
 .page-hero {
-  padding: 120px 0 56px;
+  padding: 40px 0 56px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -199,6 +199,15 @@
 .page-hero .h1 { font-size: clamp(36px, 5.2vw, 60px); margin: 0 0 18px; line-height: 1.08; }
 .page-hero .h1 .accent { color: var(--blue); }
 .page-hero .lede { max-width: 560px; margin: 0 auto; }
+.page-hero-back { text-align: left; margin-bottom: 22px; }
+.back-link {
+  display: inline-flex; align-items: center; gap: 5px;
+  color: var(--ink-2); font-weight: 600; font-size: 15px;
+  padding: 8px 14px 8px 10px; border-radius: 999px;
+  transition: background .15s, color .15s;
+}
+.back-link:hover { background: var(--line-soft); color: var(--ink); }
+.back-link svg { display: block; }
 
 /* FEATURE CARDS (홈 — 기능 모듈 그리드) */
 .feature-grid {
@@ -564,7 +573,7 @@ footer { background: var(--bg-gray); padding: 48px 0 56px; border-top: 1px solid
   .story-row.reverse { direction: ltr; }
   .pain-grid { grid-template-columns: 1fr; }
   .feature-grid { grid-template-columns: repeat(2, 1fr); }
-  .page-hero { padding: 88px 0 40px; }
+  .page-hero { padding: 28px 0 40px; }
   section, .duo-bg { padding: 72px 0; }
   #features { padding: 72px 0; }
   .story { padding: 40px 0; }
