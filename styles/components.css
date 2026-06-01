@@ -466,6 +466,38 @@ details.faq .ans-inner {
   .contact-head h3 { font-size: 20px; }
 }
 
+/* Download modal (App Store / Google Play 선택) — Toss 스타일, contact-overlay 재사용 */
+.dl-head { text-align: center; padding: 4px 4px 0; }
+.dl-app-icon {
+  display: block;
+  width: 56px; height: 56px;
+  max-width: 56px; min-width: 56px;
+  border-radius: 16px;
+  margin: 0 auto 18px;
+  object-fit: cover;
+  box-shadow: 0 6px 16px -4px rgba(25, 31, 40, 0.2);
+}
+.dl-head h3 {
+  font-size: 20px; letter-spacing: -0.03em;
+  margin-bottom: 8px; color: var(--ink);
+}
+.dl-head p {
+  font-size: 14.5px; color: var(--ink-3);
+  line-height: 1.55; letter-spacing: -0.015em;
+}
+.dl-buttons {
+  display: flex; flex-direction: column; gap: 10px;
+  margin-top: 24px;
+}
+.dl-buttons .dl-btn {
+  width: 100%; justify-content: center;
+  padding: 15px 20px; font-size: 15.5px;
+  border-radius: 14px;
+}
+/* 접속 기기 OS에 맞는 스토어 버튼 강조 */
+.dl-btn--primary { box-shadow: 0 0 0 3px var(--blue-100); }
+.dl-btn--primary.btn-white { border-color: var(--blue); }
+
 /* Floating mobile CTA */
 .floating-cta {
   display: none;

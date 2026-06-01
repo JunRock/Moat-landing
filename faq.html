@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>자주 묻는 질문 | 모앗(Moat)</title>
+<meta name="description" content="모앗 이용에 대해 자주 묻는 질문들. 가격, 회비 보관, 운영진·멤버 권한, 도입 방법, 지원 기기까지 한눈에." />
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="자주 묻는 질문 | 모앗(Moat)">
+<meta property="og:description" content="가격, 회비 보관, 권한, 도입 방법까지. 모앗에 대해 자주 묻는 질문.">
+<meta property="og:image" content="assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="모앗 (Moat)">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="자주 묻는 질문 | 모앗(Moat)">
+<meta name="twitter:description" content="가격, 회비 보관, 권한, 도입 방법까지.">
+<meta name="twitter:image" content="assets/og-image.png">
+
+<meta name="theme-color" content="#3182F6">
+
+<link rel="icon" type="image/jpeg" href="assets/icon.jpg">
+<link rel="apple-touch-icon" href="assets/icon.jpg">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+
+<!-- App styles: load order matters (tokens → base → components → layout → animations) -->
+<link rel="stylesheet" href="styles/tokens.css" />
+<link rel="stylesheet" href="styles/base.css" />
+<link rel="stylesheet" href="styles/components.css" />
+<link rel="stylesheet" href="styles/layout.css" />
+<link rel="stylesheet" href="styles/animations.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="wrap-wide nav-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/icon.jpg" alt="" class="brand-mark" />
+      <span>모앗</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-menu" id="navMenu">
+      <div class="nav-links">
+        <a href="index.html">홈</a>
+        <a href="features.html">기능</a>
+        <a href="faq.html" aria-current="page">자주 묻는 질문</a>
+        <a href="#" data-contact-trigger>문의</a>
+      </div>
+      <a class="nav-ig" href="https://www.instagram.com/moat.official.app/" target="_blank" rel="noopener noreferrer" aria-label="Instagram @moat.official.app">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#ig-grad-nav)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <defs>
+            <linearGradient id="ig-grad-nav" x1="2" y1="22" x2="22" y2="2" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#FEDA77"/>
+              <stop offset="0.25" stop-color="#F58529"/>
+              <stop offset="0.5" stop-color="#DD2A7B"/>
+              <stop offset="0.75" stop-color="#8134AF"/>
+              <stop offset="1" stop-color="#515BD4"/>
+            </linearGradient>
+          </defs>
+          <rect x="3" y="3" width="18" height="18" rx="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="url(#ig-grad-nav)" stroke="none"/>
+        </svg>
+      </a>
+      <a class="btn btn-dark nav-cta" href="#" data-download-trigger>앱 받기</a>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<header class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">FAQ</div>
+    <h1 class="h1">자주 묻는 <span class="accent">질문</span></h1>
+    <p class="lede">가장 많이 받는 질문을 모았어요. 더 궁금한 점은 언제든 문의해 주세요.</p>
+  </div>
+</header>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="reveal">
+      <details class="faq" open>
+        <summary>모앗은 무료인가요?</summary>
+        <div class="ans-wrap"><div class="ans-inner">네, 완전히 무료입니다. 광고도 없습니다. 향후 일부 고급 기능에 한해 유료 옵션이 생길 수 있지만, 핵심 기능은 계속 무료로 제공됩니다.</div></div>
+      </details>
+      <details class="faq">
+        <summary>회비를 모앗이 직접 보관하나요?</summary>
+        <div class="ans-wrap"><div class="ans-inner">아니요. 모앗은 회비를 보관하거나 중개하지 않아요. 멤버는 토스 앱으로 운영진 계좌에 <strong>직접 송금</strong>하고, 모앗은 납부 기록만 자동으로 정리해줍니다. 회비는 모임 운영진의 계좌에 그대로 입금돼요.</div></div>
+      </details>
+      <details class="faq">
+        <summary>운영진과 일반 멤버의 차이는 무엇인가요?</summary>
+        <div class="ans-wrap"><div class="ans-inner">운영진은 회비 관리, 일정 등록, 게스트 승인 등 모임 운영 권한을 가집니다. 일반 멤버는 정모 신청, 본인 회비 확인, 투표 참여 등을 할 수 있어요.</div></div>
+      </details>
+      <details class="faq">
+        <summary>도입은 어떻게 시작하나요?</summary>
+        <div class="ans-wrap"><div class="ans-inner">운영진 한 분이 앱을 설치하고 모임을 만든 뒤, 초대코드를 공유하면 됩니다. 멤버들은 코드로 입장만 하면 끝입니다.</div></div>
+      </details>
+      <details class="faq">
+        <summary>아이폰과 안드로이드 모두 쓸 수 있나요?</summary>
+        <div class="ans-wrap"><div class="ans-inner">네. iOS와 Android를 동시에 지원해요. 운영진과 멤버가 서로 다른 기기를 써도 같은 모임을 함께 사용할 수 있습니다.</div></div>
+      </details>
+      <details class="faq">
+        <summary>어떤 모임에 잘 맞나요?</summary>
+        <div class="ans-wrap"><div class="ans-inner">정기적으로 모이고 회비를 걷는 동호회라면 어디든 잘 맞아요. 특히 정모·코트 배치·회비 정산이 잦은 운동 동호회에서 운영진의 일을 크게 줄여줍니다.</div></div>
+      </details>
+    </div>
+
+    <div class="faq-contact reveal">
+      <p>찾으시는 답이 없나요?</p>
+      <a class="btn btn-ghost" href="#" data-contact-trigger>1:1 문의하기</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-inner">
+    <div class="foot-copy">© 2026 Moat. All rights reserved.</div>
+    <div class="foot-right">
+      <a class="foot-social foot-social--ig" href="https://www.instagram.com/moat.official.app/" target="_blank" rel="noopener noreferrer" aria-label="Instagram @moat.official.app">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#ig-grad-foot)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <defs>
+            <linearGradient id="ig-grad-foot" x1="2" y1="22" x2="22" y2="2" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#FEDA77"/>
+              <stop offset="0.25" stop-color="#F58529"/>
+              <stop offset="0.5" stop-color="#DD2A7B"/>
+              <stop offset="0.75" stop-color="#8134AF"/>
+              <stop offset="1" stop-color="#515BD4"/>
+            </linearGradient>
+          </defs>
+          <rect x="3" y="3" width="18" height="18" rx="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="url(#ig-grad-foot)" stroke="none"/>
+        </svg>
+      </a>
+      <nav class="foot-links" aria-label="법적 정보">
+        <a href="https://www.notion.so/Moat-33a4660ff1e7809db69dea0c87e687f0?source=copy_link" target="_blank" rel="noopener noreferrer">개인정보처리방침</a>
+        <a href="#" data-contact-trigger>문의하기</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- 다운로드 모달: App Store / Google Play 선택 -->
+<div class="contact-overlay" id="downloadModal" role="dialog" aria-modal="true" aria-labelledby="dlTitle">
+  <div class="contact-modal" role="document">
+    <button class="contact-close" type="button" aria-label="닫기">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="dl-head">
+      <img src="assets/icon.jpg" alt="모앗 앱 아이콘" class="dl-app-icon" />
+      <h3 id="dlTitle">모앗 앱 받기</h3>
+      <p>iOS와 Android 모두 지원해요.<br/>사용하는 기기의 스토어를 선택하세요.</p>
+    </div>
+    <div class="dl-buttons">
+      <a class="btn btn-dark dl-btn" id="dlAppStore" href="https://apps.apple.com/kr/app/id6761710550">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 12.04c-.03-3.16 2.58-4.68 2.7-4.75-1.47-2.15-3.76-2.45-4.57-2.48-1.94-.2-3.79 1.14-4.78 1.14-.99 0-2.52-1.11-4.14-1.08-2.13.03-4.1 1.24-5.19 3.13-2.22 3.84-.57 9.52 1.6 12.64 1.06 1.53 2.32 3.24 3.97 3.18 1.6-.07 2.21-1.03 4.14-1.03 1.93 0 2.48 1.03 4.18.99 1.72-.03 2.81-1.55 3.86-3.09 1.22-1.77 1.72-3.49 1.74-3.58-.04-.02-3.34-1.28-3.37-5.07zM13.97 2.85c.88-1.06 1.47-2.54 1.31-4.01-1.27.05-2.8.84-3.71 1.9-.81.94-1.52 2.44-1.33 3.88 1.41.11 2.85-.72 3.73-1.77z"/></svg>
+        App Store
+      </a>
+      <a class="btn btn-white dl-btn" id="dlPlayStore" href="https://play.google.com/store/apps/details?id=com.moat.moat_app">
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.609 1.814a.998.998 0 0 0-.609.92v18.532a1 1 0 0 0 .609.92L13.792 12 3.609 1.814z"/><path fill="#FBBC04" d="M16.738 9.06 13.792 12l2.946 2.94 3.69-2.142a1.078 1.078 0 0 0 0-1.596L16.738 9.06z"/><path fill="#EA4335" d="m13.792 12-10.183 10.186a.998.998 0 0 0 1.146.18l11.983-6.94L13.792 12z"/><path fill="#4285F4" d="M13.792 12 16.738 9.06 4.755 2.118a.998.998 0 0 0-1.146.18L13.792 12z"/></svg>
+        Google Play
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- 문의 모달 -->
+<div class="contact-overlay" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
+  <div class="contact-modal" role="document">
+    <button class="contact-close" type="button" aria-label="닫기">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="contact-head">
+      <h3 id="contactTitle">문의하기</h3>
+      <p>궁금한 점이나 제안할 내용을 편하게 보내주세요.<br/>영업일 기준 1~2일 내에 답변드려요.</p>
+    </div>
+    <form class="contact-form" novalidate>
+      <div class="field">
+        <label for="contactName">이름</label>
+        <input id="contactName" name="name" type="text" required />
+      </div>
+      <div class="field">
+        <label for="contactEmail">답변받을 이메일</label>
+        <input id="contactEmail" name="email" type="email" required />
+        <span class="field-hint">입력하신 이메일로 답변드릴게요.</span>
+      </div>
+      <div class="field">
+        <label>문의 유형</label>
+        <div class="chip-group" role="radiogroup" aria-label="문의 유형">
+          <button type="button" class="chip is-active" data-value="일반 문의">일반 문의</button>
+          <button type="button" class="chip" data-value="기능 제안">기능 제안</button>
+          <button type="button" class="chip" data-value="버그 신고">버그 신고</button>
+          <button type="button" class="chip" data-value="제휴/협업">제휴·협업</button>
+        </div>
+        <input type="hidden" name="type" value="일반 문의" />
+      </div>
+      <div class="field">
+        <label for="contactMessage">내용</label>
+        <textarea id="contactMessage" name="message" rows="5" required></textarea>
+      </div>
+      <div class="contact-error" role="alert" aria-live="polite"></div>
+      <button class="contact-submit" type="submit">
+        <span class="submit-label">보내기</span>
+        <span class="submit-spinner" aria-hidden="true"></span>
+      </button>
+    </form>
+    <div class="contact-success" aria-hidden="true">
+      <div class="success-check" aria-hidden="true">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 10 18 20 6"/></svg>
+      </div>
+      <h4>보냈어요!</h4>
+      <p>최대한 빠르게 답변드릴게요.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="scripts/config.js" defer></script>
+<script src="scripts/nav.js" defer></script>
+<script src="scripts/reveal.js" defer></script>
+<script src="scripts/contact.js" defer></script>
+<script src="scripts/download.js" defer></script>
+<script src="scripts/floating-cta.js" defer></script>
+
+</body>
+</html>

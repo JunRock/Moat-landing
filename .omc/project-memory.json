@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1779975198872,
+  "lastScanned": 1780235316646,
   "projectRoot": "/Users/junseok/IdeaProjects/moat-landing",
   "techStack": {
     "languages": [],
@@ -36,7 +36,7 @@
       "path": "assets",
       "purpose": "Static assets",
       "fileCount": 18,
-      "lastAccessed": 1779975198855,
+      "lastAccessed": 1780235316633,
       "keyFiles": [
         "appstore-badge.svg",
         "court.png",
@@ -49,7 +49,7 @@
       "path": "scripts",
       "purpose": "Build/utility scripts",
       "fileCount": 8,
-      "lastAccessed": 1779975198855,
+      "lastAccessed": 1780235316636,
       "keyFiles": [
         "config.js",
         "contact.js",
@@ -62,7 +62,7 @@
       "path": "styles",
       "purpose": null,
       "fileCount": 5,
-      "lastAccessed": 1779975198856,
+      "lastAccessed": 1780235316636,
       "keyFiles": [
         "animations.css",
         "base.css",
@@ -75,32 +75,86 @@
   "hotPaths": [
     {
       "path": "index.html",
-      "accessCount": 6,
-      "lastAccessed": 1779975532054,
+      "accessCount": 22,
+      "lastAccessed": 1780315335808,
       "type": "file"
     },
     {
       "path": "styles/layout.css",
-      "accessCount": 6,
-      "lastAccessed": 1779975600747,
+      "accessCount": 20,
+      "lastAccessed": 1780318757823,
       "type": "file"
     },
     {
-      "path": "styles/tokens.css",
-      "accessCount": 3,
-      "lastAccessed": 1779975370442,
+      "path": "features.html",
+      "accessCount": 15,
+      "lastAccessed": 1780316878259,
+      "type": "file"
+    },
+    {
+      "path": "faq.html",
+      "accessCount": 6,
+      "lastAccessed": 1780315654353,
       "type": "file"
     },
     {
       "path": "styles/components.css",
-      "accessCount": 1,
-      "lastAccessed": 1779975273562,
+      "accessCount": 5,
+      "lastAccessed": 1780315237261,
+      "type": "file"
+    },
+    {
+      "path": "styles/tokens.css",
+      "accessCount": 4,
+      "lastAccessed": 1780235465146,
       "type": "file"
     },
     {
       "path": "styles/base.css",
+      "accessCount": 2,
+      "lastAccessed": 1780235668231,
+      "type": "file"
+    },
+    {
+      "path": "scripts/nav.js",
+      "accessCount": 2,
+      "lastAccessed": 1780235950935,
+      "type": "file"
+    },
+    {
+      "path": "scripts/floating-cta.js",
+      "accessCount": 2,
+      "lastAccessed": 1780236212642,
+      "type": "file"
+    },
+    {
+      "path": "scripts/config.js",
       "accessCount": 1,
-      "lastAccessed": 1779975283304,
+      "lastAccessed": 1780235670109,
+      "type": "file"
+    },
+    {
+      "path": "scripts/stories-carousel.js",
+      "accessCount": 1,
+      "lastAccessed": 1780235670374,
+      "type": "file"
+    },
+    {
+      "path": "scripts/contact.js",
+      "accessCount": 1,
+      "lastAccessed": 1780235711486,
+      "type": "file"
+    },
+    {
+      "path": "scripts/reveal.js",
+      "accessCount": 1,
+      "lastAccessed": 1780235712391,
+      "type": "file"
+    },
+    {
+      "path": "scripts/download.js",
+      "accessCount": 1,
+      "lastAccessed": 1780236969007,
       "type": "file"
     }
   ],

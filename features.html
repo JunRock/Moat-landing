@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>기능 | 모앗(Moat)</title>
+<meta name="description" content="정모 일정, 회비 관리, 회원 관리, 코트 배치, 커뮤니티·투표, 자동 알림까지. 동호회 운영에 필요한 모든 기능을 모앗 하나로." />
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="기능 | 모앗(Moat)">
+<meta property="og:description" content="정모·회비·코트·회원 관리부터 자동 알림까지. 동호회 운영에 필요한 모든 기능.">
+<meta property="og:image" content="assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="모앗 (Moat)">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="기능 | 모앗(Moat)">
+<meta name="twitter:description" content="정모·회비·코트·회원 관리부터 자동 알림까지.">
+<meta name="twitter:image" content="assets/og-image.png">
+
+<meta name="theme-color" content="#3182F6">
+
+<link rel="icon" type="image/jpeg" href="assets/icon.jpg">
+<link rel="apple-touch-icon" href="assets/icon.jpg">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+
+<!-- App styles: load order matters (tokens → base → components → layout → animations) -->
+<link rel="stylesheet" href="styles/tokens.css" />
+<link rel="stylesheet" href="styles/base.css" />
+<link rel="stylesheet" href="styles/components.css" />
+<link rel="stylesheet" href="styles/layout.css" />
+<link rel="stylesheet" href="styles/animations.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="wrap-wide nav-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/icon.jpg" alt="" class="brand-mark" />
+      <span>모앗</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-menu" id="navMenu">
+      <div class="nav-links">
+        <a href="index.html">홈</a>
+        <a href="features.html" aria-current="page">기능</a>
+        <a href="faq.html">자주 묻는 질문</a>
+        <a href="#" data-contact-trigger>문의</a>
+      </div>
+      <a class="nav-ig" href="https://www.instagram.com/moat.official.app/" target="_blank" rel="noopener noreferrer" aria-label="Instagram @moat.official.app">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#ig-grad-nav)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <defs>
+            <linearGradient id="ig-grad-nav" x1="2" y1="22" x2="22" y2="2" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#FEDA77"/>
+              <stop offset="0.25" stop-color="#F58529"/>
+              <stop offset="0.5" stop-color="#DD2A7B"/>
+              <stop offset="0.75" stop-color="#8134AF"/>
+              <stop offset="1" stop-color="#515BD4"/>
+            </linearGradient>
+          </defs>
+          <rect x="3" y="3" width="18" height="18" rx="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="url(#ig-grad-nav)" stroke="none"/>
+        </svg>
+      </a>
+      <a class="btn btn-dark nav-cta" href="#" data-download-trigger>앱 받기</a>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<header class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">기능</div>
+    <h1 class="h1">동호회 운영에 필요한<br/>모든 기능, <span class="accent">한 앱에.</span></h1>
+    <p class="lede">정모부터 자동 알림까지. 흩어진 도구를 모앗 하나로 모았어요.</p>
+  </div>
+</header>
+
+<!-- Stories: 모바일에선 가로 캐러셀, 데스크톱에선 세로 스택 -->
+<div class="stories-dots-wrap stories-dots-wrap--top"><div class="stories-dots" id="storiesDots" role="tablist" aria-label="기능 이동"></div></div>
+<div class="stories-track" id="storiesTrack">
+<!-- Story 1: 정모 -->
+<section class="story" id="feature-schedule">
+  <div class="wrap-wide">
+    <div class="story-row reveal">
+      <div>
+        <span class="story-tag">정모 일정</span>
+        <h2>다음 정모,<br/><span class="accent">모두가 알아요.</span></h2>
+        <p class="lede">오늘 기준 <span class="hl">가장 가까운 다음 정모</span>가 홈 화면 가장 위에 자동으로 떠요. 정모 전날 아침에는 참석자에게 자동 알림이 가니까, 다시 단톡방에 공지할 필요가 없어요.</p>
+        <ul class="story-points">
+          <li>가장 가까운 정모, 홈에 자동 표시</li>
+          <li>정모 전날 오전 10시, 참석자에게 자동 알림</li>
+          <li>참석·취소도 <b>탭 한 번</b>으로</li>
+        </ul>
+      </div>
+      <div class="story-visual">
+        <div class="story-phone"><div class="scr"><img src="assets/schedule.png" alt="정모 일정 화면" /></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Story 2: 회비 -->
+<section class="story" id="feature-fee">
+  <div class="wrap-wide">
+    <div class="story-row reverse reveal">
+      <div>
+        <span class="story-tag">회비 관리</span>
+        <h2>한 달 정산,<br/><span class="accent">자동으로 끝나요.</span></h2>
+        <p class="lede">회비·게스트비·지출이 한 화면에. 납부일이 지나면 미납자에게 매일 자동 알림이 가요. 멤버는 <span class="hl">토스로 한 번에 송금</span>하면, 자동으로 기록돼요.</p>
+        <ul class="story-points">
+          <li>회비·게스트비·지출 한 화면 관리</li>
+          <li>미납자에게 매일 오후 9시 자동 알림</li>
+          <li>토스로 <b>1초 송금</b>, 자동 기록</li>
+        </ul>
+      </div>
+      <div class="story-visual gray">
+        <div class="story-phone"><div class="scr"><img src="assets/payment.png" alt="회비 관리 화면" /></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Story 3: 회원 관리 -->
+<section class="story" id="feature-member">
+  <div class="wrap-wide">
+    <div class="story-row reveal">
+      <div>
+        <span class="story-tag">회원 관리</span>
+        <h2>회원 정보가,<br/><span class="accent">한눈에 들어와요.</span></h2>
+        <p class="lede">조별·성별로 색상 구분된 회원 목록. 이름 검색이나 <span class="hl">조·성별 필터로 한 번에</span> 찾을 수 있어요. 모임장 위임이나 총무 지정도 같은 화면에서 끝나요.</p>
+        <ul class="story-points">
+          <li>조·성별 통계 한 화면에</li>
+          <li>이름 검색·조별 필터 빠른 조회</li>
+          <li>모임장·총무 권한 부여까지 한 곳에서</li>
+        </ul>
+      </div>
+      <div class="story-visual">
+        <div class="story-phone"><div class="scr"><img src="assets/guest.png" alt="회원 목록 화면" /></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Story 4: 코트 -->
+<section class="story" id="feature-court">
+  <div class="wrap-wide">
+    <div class="story-row reverse reveal">
+      <div>
+        <span class="story-tag">코트 배치</span>
+        <h2>오늘 누가<br/><span class="accent">어느 코트에서?</span></h2>
+        <p class="lede">정모 당일 <span class="hl">코트별 게임 현황</span>을 실시간으로 공유해요. 화이트보드와 메모지가 필요 없습니다. 운영진과 멤버 모두 모바일로 같이 봐요.</p>
+        <ul class="story-points">
+          <li>코트별 게임 현황 실시간 공유</li>
+          <li>화이트보드·메모지 불필요</li>
+          <li>운영진·멤버 함께 확인</li>
+        </ul>
+      </div>
+      <div class="story-visual gray">
+        <div class="story-phone"><div class="scr"><img src="assets/court.png" alt="코트 배치 화면" /></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Story 5: 커뮤니티 -->
+<section class="story" id="feature-community">
+  <div class="wrap-wide">
+    <div class="story-row reveal">
+      <div>
+        <span class="story-tag">커뮤니티</span>
+        <h2>공지와 사진이<br/><span class="accent">한 곳에 모여요.</span></h2>
+        <p class="lede"><span class="hl">단톡방을 거꾸로 스크롤할 일이 없어요.</span> 공지는 상단에 고정되고, 정모 사진은 한 앨범에 모여요. 새 글이 올라오면 자동 푸시 알림이 가니 멤버도 놓칠 일이 없고요.</p>
+        <ul class="story-points">
+          <li>중요 공지는 상단 고정·자동 푸시 알림</li>
+          <li>정모 사진 업로드</li>
+          <li>게시판으로 자유로운 소통까지</li>
+        </ul>
+      </div>
+      <div class="story-visual">
+        <div class="story-phone">
+          <div class="scr scr-slides">
+            <img src="assets/notice.png" alt="공지사항 화면" />
+            <img src="assets/photo.png" alt="사진첩 화면" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Story 6: 투표 -->
+<section class="story" id="feature-vote">
+  <div class="wrap-wide">
+    <div class="story-row reverse reveal">
+      <div>
+        <span class="story-tag">투표</span>
+        <h2>의견 모으기,<br/><span class="accent">한 번에 끝.</span></h2>
+        <p class="lede">투표가 단톡방 메시지에 섞이지 않고 따로 한 곳에 모여요.<br/>진행 중인 안건도, 마감된 결과도 어디 갔는지 헤매지 않아요.<br/>정모 시간, 회비 인상, 단체복 디자인까지 — 안건마다 <span class="hl">익명·복수 선택을 자유롭게</span> 만들 수 있고요.</p>
+        <ul class="story-points">
+          <li>복수 선택·익명 투표 옵션 지원</li>
+          <li>마감일 설정 시 자동 종료</li>
+          <li>새 투표 등록 시 멤버 전체에 푸시 알림</li>
+        </ul>
+      </div>
+      <div class="story-visual gray">
+        <div class="story-phone"><div class="scr"><img src="assets/vote.png" alt="투표 화면" /></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Story 7: 알림 (마지막) -->
+<section class="story story-last" id="feature-noti">
+  <div class="wrap-wide">
+    <div class="story-row reveal">
+      <div>
+        <span class="story-tag">알림 발송</span>
+        <h2>단톡방으로<br/><span class="accent">안 보내도 돼요.</span></h2>
+        <p class="lede">미납자, 정모, 새 공지, 투표까지. 필요한 알림은 <span class="hl">앱이 자동으로</span> 보내요. 단톡방 알림 피로도가 한결 줄어듭니다.</p>
+        <ul class="story-points">
+          <li>미납자에게 매일 오후 9시 자동 알림</li>
+          <li>정모 전날 오전 10시 자동 알림</li>
+          <li>새 공지·투표도 자동 푸시 발송</li>
+        </ul>
+      </div>
+      <div class="story-visual">
+        <div class="story-phone"><div class="scr"><img src="assets/notification.png" alt="알림 화면" /></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<footer>
+  <div class="wrap foot-inner">
+    <div class="foot-copy">© 2026 Moat. All rights reserved.</div>
+    <div class="foot-right">
+      <a class="foot-social foot-social--ig" href="https://www.instagram.com/moat.official.app/" target="_blank" rel="noopener noreferrer" aria-label="Instagram @moat.official.app">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#ig-grad-foot)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <defs>
+            <linearGradient id="ig-grad-foot" x1="2" y1="22" x2="22" y2="2" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#FEDA77"/>
+              <stop offset="0.25" stop-color="#F58529"/>
+              <stop offset="0.5" stop-color="#DD2A7B"/>
+              <stop offset="0.75" stop-color="#8134AF"/>
+              <stop offset="1" stop-color="#515BD4"/>
+            </linearGradient>
+          </defs>
+          <rect x="3" y="3" width="18" height="18" rx="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="url(#ig-grad-foot)" stroke="none"/>
+        </svg>
+      </a>
+      <nav class="foot-links" aria-label="법적 정보">
+        <a href="https://www.notion.so/Moat-33a4660ff1e7809db69dea0c87e687f0?source=copy_link" target="_blank" rel="noopener noreferrer">개인정보처리방침</a>
+        <a href="#" data-contact-trigger>문의하기</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- 다운로드 모달: App Store / Google Play 선택 -->
+<div class="contact-overlay" id="downloadModal" role="dialog" aria-modal="true" aria-labelledby="dlTitle">
+  <div class="contact-modal" role="document">
+    <button class="contact-close" type="button" aria-label="닫기">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="dl-head">
+      <img src="assets/icon.jpg" alt="모앗 앱 아이콘" class="dl-app-icon" />
+      <h3 id="dlTitle">모앗 앱 받기</h3>
+      <p>iOS와 Android 모두 지원해요.<br/>사용하는 기기의 스토어를 선택하세요.</p>
+    </div>
+    <div class="dl-buttons">
+      <a class="btn btn-dark dl-btn" id="dlAppStore" href="https://apps.apple.com/kr/app/id6761710550">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 12.04c-.03-3.16 2.58-4.68 2.7-4.75-1.47-2.15-3.76-2.45-4.57-2.48-1.94-.2-3.79 1.14-4.78 1.14-.99 0-2.52-1.11-4.14-1.08-2.13.03-4.1 1.24-5.19 3.13-2.22 3.84-.57 9.52 1.6 12.64 1.06 1.53 2.32 3.24 3.97 3.18 1.6-.07 2.21-1.03 4.14-1.03 1.93 0 2.48 1.03 4.18.99 1.72-.03 2.81-1.55 3.86-3.09 1.22-1.77 1.72-3.49 1.74-3.58-.04-.02-3.34-1.28-3.37-5.07zM13.97 2.85c.88-1.06 1.47-2.54 1.31-4.01-1.27.05-2.8.84-3.71 1.9-.81.94-1.52 2.44-1.33 3.88 1.41.11 2.85-.72 3.73-1.77z"/></svg>
+        App Store
+      </a>
+      <a class="btn btn-white dl-btn" id="dlPlayStore" href="https://play.google.com/store/apps/details?id=com.moat.moat_app">
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.609 1.814a.998.998 0 0 0-.609.92v18.532a1 1 0 0 0 .609.92L13.792 12 3.609 1.814z"/><path fill="#FBBC04" d="M16.738 9.06 13.792 12l2.946 2.94 3.69-2.142a1.078 1.078 0 0 0 0-1.596L16.738 9.06z"/><path fill="#EA4335" d="m13.792 12-10.183 10.186a.998.998 0 0 0 1.146.18l11.983-6.94L13.792 12z"/><path fill="#4285F4" d="M13.792 12 16.738 9.06 4.755 2.118a.998.998 0 0 0-1.146.18L13.792 12z"/></svg>
+        Google Play
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- 문의 모달 -->
+<div class="contact-overlay" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
+  <div class="contact-modal" role="document">
+    <button class="contact-close" type="button" aria-label="닫기">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="contact-head">
+      <h3 id="contactTitle">문의하기</h3>
+      <p>궁금한 점이나 제안할 내용을 편하게 보내주세요.<br/>영업일 기준 1~2일 내에 답변드려요.</p>
+    </div>
+    <form class="contact-form" novalidate>
+      <div class="field">
+        <label for="contactName">이름</label>
+        <input id="contactName" name="name" type="text" required />
+      </div>
+      <div class="field">
+        <label for="contactEmail">답변받을 이메일</label>
+        <input id="contactEmail" name="email" type="email" required />
+        <span class="field-hint">입력하신 이메일로 답변드릴게요.</span>
+      </div>
+      <div class="field">
+        <label>문의 유형</label>
+        <div class="chip-group" role="radiogroup" aria-label="문의 유형">
+          <button type="button" class="chip is-active" data-value="일반 문의">일반 문의</button>
+          <button type="button" class="chip" data-value="기능 제안">기능 제안</button>
+          <button type="button" class="chip" data-value="버그 신고">버그 신고</button>
+          <button type="button" class="chip" data-value="제휴/협업">제휴·협업</button>
+        </div>
+        <input type="hidden" name="type" value="일반 문의" />
+      </div>
+      <div class="field">
+        <label for="contactMessage">내용</label>
+        <textarea id="contactMessage" name="message" rows="5" required></textarea>
+      </div>
+      <div class="contact-error" role="alert" aria-live="polite"></div>
+      <button class="contact-submit" type="submit">
+        <span class="submit-label">보내기</span>
+        <span class="submit-spinner" aria-hidden="true"></span>
+      </button>
+    </form>
+    <div class="contact-success" aria-hidden="true">
+      <div class="success-check" aria-hidden="true">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 10 18 20 6"/></svg>
+      </div>
+      <h4>보냈어요!</h4>
+      <p>최대한 빠르게 답변드릴게요.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="scripts/config.js" defer></script>
+<script src="scripts/nav.js" defer></script>
+<script src="scripts/reveal.js" defer></script>
+<script src="scripts/contact.js" defer></script>
+<script src="scripts/download.js" defer></script>
+<script src="scripts/stories-carousel.js" defer></script>
+
+</body>
+</html>

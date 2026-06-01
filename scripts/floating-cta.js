@@ -3,7 +3,8 @@
 // → 사용자가 직접 자기 OS에 맞는 스토어 선택
 (function () {
   const cta = document.getElementById('floatingCta');
-  const hero = document.querySelector('.hero');
+  // 홈은 .hero, 서브페이지는 .page-hero 기준으로 노출 시점 계산
+  const hero = document.querySelector('.hero') || document.querySelector('.page-hero');
   if (!cta || !hero) return;
 
   let ticking = false;
