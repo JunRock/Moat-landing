@@ -463,13 +463,14 @@ table.cmp th, table.cmp td {
 }
 table.cmp thead th {
   background: var(--bg-gray);
-  font-size: 14px; font-weight: 700; color: var(--ink-2);
+  font-size: 16px; font-weight: 700; color: var(--ink-2);
 }
 table.cmp thead th.us {
   background: var(--blue); color: #fff;
-  font-size: 16px;
 }
 table.cmp thead th:first-child { width: 28%; }
+table.cmp th:not(:first-child),
+table.cmp td:not(:first-child) { text-align: center; }
 table.cmp tbody td { color: var(--ink-2); font-weight: 500; }
 table.cmp tbody td:first-child { color: var(--ink); font-weight: 700; }
 table.cmp td.us {
@@ -759,9 +760,9 @@ footer { background: var(--bg-gray); padding: 48px 0 56px; border-top: 1px solid
     -webkit-overflow-scrolling: touch;
     border-radius: 20px;
   }
-  table.cmp { min-width: 580px; font-size: 14px; }
+  table.cmp { min-width: 0; width: 100%; font-size: 13px; }
   table.cmp th, table.cmp td {
-    padding: 14px 14px;
+    padding: 13px 10px;
     font-size: 13px;
   }
   table.cmp thead th { font-size: 12px; }
