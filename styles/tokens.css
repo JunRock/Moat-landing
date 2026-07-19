@@ -1,22 +1,115 @@
-/* Design tokens — 색상, 그림자 등 공통 변수 */
+/* Design tokens — 듀얼 테마. :root = 다크(기본), [data-theme="light"] = 라이트
+ * 테마 전환은 scripts/theme.js가 <html data-theme>를 토글 (기본 dark, localStorage 유지) */
 :root {
+  --blue: #4C8DFF;
+  --blue-600: #6EA2FF;
+  --blue-deep: #2E6BE0;
+  --blue-50: rgba(76, 141, 255, 0.10);
+  --blue-100: rgba(76, 141, 255, 0.18);
+  --ink: #F0F3F8;
+  --ink-2: #AEB6C2;
+  --ink-3: #7E8694;
+  --ink-4: #545C6B;
+  --on-ink: #12141A;        /* var(--ink) 배경 위 글자색 */
+  --ink-hover: #FFFFFF;     /* ink 배경 버튼의 hover 배경 */
+  --line: rgba(255, 255, 255, 0.10);
+  --line-soft: rgba(255, 255, 255, 0.06);
+  --bg: #0B0D12;
+  --bg-gray: #0E1117;
+  --bg-blue: #0D1420;
+  --bg-dark: #0F1218;
+  --surface: #141821;
+  --surface-2: #1B202C;
+  --nav-bg: rgba(11, 13, 18, 0.72);
+  --nav-bg-solid: rgba(11, 13, 18, 0.97);
+  --scrim: rgba(0, 0, 0, 0.6);
+  --veil: rgba(255, 255, 255, 0.03);      /* 리스트 hover 배경 */
+  --phone-bezel: #1A1E27;
+  --phone-ring: rgba(255, 255, 255, 0.14);
+  --input-focus-bg: #1B202C;
+  --mark-off: #3A4150; --mark-off-fg: #AEB6C2;
+  --ok-text: #2BD9A8;
+  --btn2-bg: rgba(255, 255, 255, 0.06);
+  --btn2-bg-h: rgba(255, 255, 255, 0.10);
+  --btn2-border: rgba(255, 255, 255, 0.14);
+  --btn2-border-h: rgba(255, 255, 255, 0.22);
+  --hero-bg: radial-gradient(ellipse 90% 55% at 50% -10%, rgba(76, 141, 255, 0.13) 0%, transparent 65%);
+  --cta-bg: linear-gradient(160deg, #2E6BE0 0%, #1E4FC2 55%, #173F9E 100%);
+  --cta-fg: #FFFFFF;
+  --cta-fg-2: rgba(255, 255, 255, 0.75);
+  --warn: #FF6B76;
+  --ok: #2BD9A8;
+  --yellow: #FFC14D;
+  --shadow-card: 0 2px 10px rgba(0, 0, 0, 0.3);
+  --shadow-card-h: 0 16px 40px -12px rgba(0, 0, 0, 0.55);
+  --shadow-chip: 0 16px 40px -16px rgba(0, 0, 0, 0.6), 0 2px 6px rgba(0, 0, 0, 0.3);
+  --shadow-phone: 0 40px 90px -20px rgba(46, 107, 224, 0.35), 0 20px 40px -20px rgba(0, 0, 0, 0.6);
+  --shadow-float: 0 18px 36px -10px rgba(0, 0, 0, 0.55), 0 4px 10px -2px rgba(0, 0, 0, 0.3);
+
+  --tint-blue-bg: rgba(76, 141, 255, 0.14);  --tint-blue-fg: #7FB0FF;
+  --tint-amber-bg: rgba(255, 193, 77, 0.12); --tint-amber-fg: #FFC14D;
+  --tint-rose-bg: rgba(255, 107, 118, 0.12); --tint-rose-fg: #FF8A93;
+  --tint-emerald-bg: rgba(43, 217, 168, 0.12); --tint-emerald-fg: #4FE3BC;
+  --tint-violet-bg: rgba(157, 124, 255, 0.13); --tint-violet-fg: #B29AFF;
+  --tint-cyan-bg: rgba(64, 196, 231, 0.12);  --tint-cyan-fg: #62D3F0;
+  --tint-orange-bg: rgba(255, 150, 79, 0.12);--tint-orange-fg: #FFA46B;
+  --tint-pink-bg: rgba(244, 114, 182, 0.12); --tint-pink-fg: #F78BC4;
+  --tint-indigo-bg: rgba(129, 140, 248, 0.13); --tint-indigo-fg: #9BA5FF;
+}
+
+:root[data-theme="light"] {
   --blue: #3182F6;
   --blue-600: #2563EB;
+  --blue-deep: #1B64DA;
   --blue-50: #F4F8FF;
   --blue-100: #E8F1FF;
   --ink: #191F28;
   --ink-2: #4E5968;
   --ink-3: #8B95A1;
   --ink-4: #B0B8C1;
+  --on-ink: #FFFFFF;
+  --ink-hover: #000000;
   --line: #E5E8EB;
   --line-soft: #F2F4F6;
-  --bg: #ffffff;
+  --bg: #FFFFFF;
   --bg-gray: #F9FAFB;
   --bg-blue: #F4F8FF;
+  --bg-dark: #17191E;
+  --surface: #FFFFFF;
+  --surface-2: #F9FAFB;
+  --nav-bg: rgba(255, 255, 255, 0.8);
+  --nav-bg-solid: rgba(255, 255, 255, 0.98);
+  --scrim: rgba(10, 14, 22, 0.45);
+  --veil: rgba(25, 31, 40, 0.02);
+  --phone-bezel: #0F1115;
+  --phone-ring: transparent;
+  --input-focus-bg: #FFFFFF;
+  --mark-off: #C7CDD4; --mark-off-fg: #FFFFFF;
+  --ok-text: #00A87E;
+  --btn2-bg: #FFFFFF;
+  --btn2-bg-h: #F9FAFB;
+  --btn2-border: #E5E8EB;
+  --btn2-border-h: #B0B8C1;
+  --hero-bg: none;
+  --cta-bg: #F9FAFB;
+  --cta-fg: #191F28;
+  --cta-fg-2: #4E5968;
   --warn: #F04452;
   --ok: #00C896;
   --yellow: #FFB02E;
   --shadow-card: 0 2px 8px rgba(25, 31, 40, 0.04), 0 1px 0 rgba(25, 31, 40, 0.02);
-  --shadow-card-h: 0 12px 32px -8px rgba(25, 31, 40, 0.16), 0 1px 0 rgba(25, 31, 40, 0.02);
-  --shadow-phone: 0 40px 80px -20px rgba(49, 130, 246, 0.25), 0 20px 40px -20px rgba(25, 31, 40, 0.2);
+  --shadow-card-h: 0 12px 32px -8px rgba(25, 31, 40, 0.14), 0 1px 0 rgba(25, 31, 40, 0.02);
+  --shadow-chip: 0 12px 32px -12px rgba(25, 31, 40, 0.16), 0 2px 6px rgba(25, 31, 40, 0.05);
+  --shadow-phone: 0 30px 60px -18px rgba(25, 31, 40, 0.22), 0 12px 24px -10px rgba(25, 31, 40, 0.1);
+  --shadow-float: 0 18px 36px -10px rgba(25, 31, 40, 0.35), 0 4px 10px -2px rgba(25, 31, 40, 0.18);
+
+  --tint-blue-bg: #EAF2FE;   --tint-blue-fg: #2D74E0;
+  --tint-amber-bg: #FFF3DC;  --tint-amber-fg: #D97706;
+  --tint-rose-bg: #FEECEE;   --tint-rose-fg: #E14856;
+  --tint-emerald-bg: #E4F8F0;--tint-emerald-fg: #0E9F76;
+  --tint-violet-bg: #F1EDFE; --tint-violet-fg: #7C5CE0;
+  --tint-cyan-bg: #E3F6FB;   --tint-cyan-fg: #0E8AA6;
+  --tint-orange-bg: #FFEFE3; --tint-orange-fg: #E06B18;
+  --tint-pink-bg: #FDEDF4;   --tint-pink-fg: #DB4B84;
+  --tint-indigo-bg: #ECEEFE; --tint-indigo-fg: #5661D6;
 }

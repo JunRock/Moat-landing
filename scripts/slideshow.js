@@ -7,7 +7,7 @@
 (function () {
   const slides = document.querySelectorAll('#phoneSlideshow .slide');
   if (!slides.length) return;
-  const floats = document.querySelectorAll('.hero-visual .float');
+  const floats = document.querySelectorAll('.hero-stage .float');
 
   function syncFloats(screen) {
     floats.forEach((f) => {
@@ -20,7 +20,7 @@
   // 초기 동기화: 첫 active 슬라이드와 일치하는 뱃지만 보이게
   syncFloats(slides[0].dataset.screen);
 
-  const INTERVAL_MS = 2300; // 슬라이드 전환 주기
+  const INTERVAL_MS = 3400; // 슬라이드 전환 주기
   const EXIT_MS = 900; // CSS transition 시간과 맞춤
 
   let idx = 0;

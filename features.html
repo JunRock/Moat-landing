@@ -20,7 +20,8 @@
 <meta name="twitter:description" content="정모·회비·코트·회원 관리부터 자동 알림까지.">
 <meta name="twitter:image" content="assets/og-image.png">
 
-<meta name="theme-color" content="#3182F6">
+<meta name="theme-color" content="#0B0D12">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('moat-theme')||'dark'}catch(e){document.documentElement.dataset.theme='dark'}</script>
 
 <link rel="icon" type="image/jpeg" href="assets/icon.jpg">
 <link rel="apple-touch-icon" href="assets/icon.jpg">
@@ -50,10 +51,14 @@
     <div class="nav-menu" id="navMenu">
       <div class="nav-links">
         <a href="index.html">홈</a>
-        <a href="features.html" aria-current="page">기능</a>
+        <a href="index.html#features" aria-current="page">기능</a>
         <a href="faq.html">자주 묻는 질문</a>
         <a href="#" data-contact-trigger>문의</a>
       </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="라이트/다크 모드 전환">
+        <svg class="ico-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="ico-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <a class="nav-ig" href="https://www.instagram.com/moat.official.app/" target="_blank" rel="noopener noreferrer" aria-label="Instagram @moat.official.app">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#ig-grad-nav)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <defs>
@@ -351,6 +356,7 @@
 <!-- Scripts -->
 <script src="scripts/config.js" defer></script>
 <script src="scripts/nav.js" defer></script>
+<script src="scripts/theme.js" defer></script>
 <script src="scripts/reveal.js" defer></script>
 <script src="scripts/contact.js" defer></script>
 <script src="scripts/download.js" defer></script>

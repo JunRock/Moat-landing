@@ -20,7 +20,8 @@
 <meta name="twitter:description" content="정모, 회비, 게스트, 코트 배치, 투표까지 한 앱에서.">
 <meta name="twitter:image" content="assets/og-image.png">
 
-<meta name="theme-color" content="#3182F6">
+<meta name="theme-color" content="#0B0D12">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('moat-theme')||'dark'}catch(e){document.documentElement.dataset.theme='dark'}</script>
 
 <link rel="icon" type="image/jpeg" href="assets/icon.jpg">
 <link rel="apple-touch-icon" href="assets/icon.jpg">
@@ -50,10 +51,14 @@
     <div class="nav-menu" id="navMenu">
       <div class="nav-links">
         <a href="index.html" aria-current="page">홈</a>
-        <a href="features.html">기능</a>
+        <a href="#features">기능</a>
         <a href="faq.html">자주 묻는 질문</a>
         <a href="#" data-contact-trigger>문의</a>
       </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="라이트/다크 모드 전환">
+        <svg class="ico-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="ico-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <a class="nav-ig" href="https://www.instagram.com/moat.official.app/" target="_blank" rel="noopener noreferrer" aria-label="Instagram @moat.official.app">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#ig-grad-nav)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <defs>
@@ -75,135 +80,49 @@
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- HERO: 센터 정렬 + 폰 스테이지. 슬라이드에 맞춰 알림 카드 1장씩 교체 등장 -->
 <header class="hero">
-  <div class="wrap-wide hero-grid">
-    <div>
-      <span class="hero-chip"><span class="dot">✦</span> 동호회 운영, 한 앱에서</span>
-      <h1>
-        <span class="line">운영진의 <span class="accent">2시간</span>을,</span>
-        <span class="line"><span class="accent">즐기는 시간</span>으로.</span>
-      </h1>
-      <p class="hero-sub">
-        매달 반복되던 운영진의 일을 앱이 대신해요.<br/>
-        멤버는 토스로 송금하고, 정모 참석도 한 번 탭으로 끝.
-      </p>
+  <div class="wrap hero-inner">
+    <span class="hero-chip"><span class="dot" aria-hidden="true"></span> 운영진을 위한 동호회 매니저</span>
+    <h1>
+      <span class="line">동호회 운영,</span>
+      <span class="line"><span class="accent">모앗</span> 하나로 끝.</span>
+    </h1>
+    <p class="hero-sub">
+      정모 일정부터 회비 정산, 코트 배치까지.<br/>
+      매달 반복되던 운영진의 일을 앱이 대신해요.
+    </p>
 
-      <div class="hero-ctas" id="download">
-        <a class="btn btn-dark" href="https://apps.apple.com/kr/app/id6761710550">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 12.04c-.03-3.16 2.58-4.68 2.7-4.75-1.47-2.15-3.76-2.45-4.57-2.48-1.94-.2-3.79 1.14-4.78 1.14-.99 0-2.52-1.11-4.14-1.08-2.13.03-4.1 1.24-5.19 3.13-2.22 3.84-.57 9.52 1.6 12.64 1.06 1.53 2.32 3.24 3.97 3.18 1.6-.07 2.21-1.03 4.14-1.03 1.93 0 2.48 1.03 4.18.99 1.72-.03 2.81-1.55 3.86-3.09 1.22-1.77 1.72-3.49 1.74-3.58-.04-.02-3.34-1.28-3.37-5.07zM13.97 2.85c.88-1.06 1.47-2.54 1.31-4.01-1.27.05-2.8.84-3.71 1.9-.81.94-1.52 2.44-1.33 3.88 1.41.11 2.85-.72 3.73-1.77z"/></svg>
-          App Store
-        </a>
-        <a class="btn btn-white" href="https://play.google.com/store/apps/details?id=com.moat.moat_app">
-          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.609 1.814a.998.998 0 0 0-.609.92v18.532a1 1 0 0 0 .609.92L13.792 12 3.609 1.814z"/><path fill="#FBBC04" d="M16.738 9.06 13.792 12l2.946 2.94 3.69-2.142a1.078 1.078 0 0 0 0-1.596L16.738 9.06z"/><path fill="#EA4335" d="m13.792 12-10.183 10.186a.998.998 0 0 0 1.146.18l11.983-6.94L13.792 12z"/><path fill="#4285F4" d="M13.792 12 16.738 9.06 4.755 2.118a.998.998 0 0 0-1.146.18L13.792 12z"/></svg>
-          Google Play
-        </a>
-      </div>
-
-      <div class="hero-meta">
-        <span><b>완전 무료</b> · 광고 없음</span>
-        <span><b>iOS · Android</b> 동시 지원</span>
-        <span><b>1분</b>이면 모임 시작</span>
-      </div>
+    <div class="hero-ctas" id="download">
+      <a class="btn btn-dark" href="https://apps.apple.com/kr/app/id6761710550">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 12.04c-.03-3.16 2.58-4.68 2.7-4.75-1.47-2.15-3.76-2.45-4.57-2.48-1.94-.2-3.79 1.14-4.78 1.14-.99 0-2.52-1.11-4.14-1.08-2.13.03-4.1 1.24-5.19 3.13-2.22 3.84-.57 9.52 1.6 12.64 1.06 1.53 2.32 3.24 3.97 3.18 1.6-.07 2.21-1.03 4.14-1.03 1.93 0 2.48 1.03 4.18.99 1.72-.03 2.81-1.55 3.86-3.09 1.22-1.77 1.72-3.49 1.74-3.58-.04-.02-3.34-1.28-3.37-5.07zM13.97 2.85c.88-1.06 1.47-2.54 1.31-4.01-1.27.05-2.8.84-3.71 1.9-.81.94-1.52 2.44-1.33 3.88 1.41.11 2.85-.72 3.73-1.77z"/></svg>
+        App Store
+      </a>
+      <a class="btn btn-white" href="https://play.google.com/store/apps/details?id=com.moat.moat_app">
+        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.609 1.814a.998.998 0 0 0-.609.92v18.532a1 1 0 0 0 .609.92L13.792 12 3.609 1.814z"/><path fill="#FBBC04" d="M16.738 9.06 13.792 12l2.946 2.94 3.69-2.142a1.078 1.078 0 0 0 0-1.596L16.738 9.06z"/><path fill="#EA4335" d="m13.792 12-10.183 10.186a.998.998 0 0 0 1.146.18l11.983-6.94L13.792 12z"/><path fill="#4285F4" d="M13.792 12 16.738 9.06 4.755 2.118a.998.998 0 0 0-1.146.18L13.792 12z"/></svg>
+        Google Play
+      </a>
     </div>
 
-    <div class="hero-visual" aria-hidden="true">
-      <div class="blob"></div>
+    <div class="hero-meta">
+      <span><b>완전 무료</b> · 광고 없음</span>
+      <span><b>iOS · Android</b> 동시 지원</span>
+      <span><b>1분</b>이면 모임 시작</span>
+    </div>
+  </div>
 
-      <div class="float float-1" data-screens="schedule">
-        <div class="ico" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        </div>
-        <div>
-          <div class="t">오늘 정모 D-Day</div>
-          <div class="s">시립 다목적체육관</div>
-        </div>
-      </div>
-      <div class="float float-2" data-screens="notification">
-        <div class="ico" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
-        </div>
-        <div>
-          <div class="t">새 투표 알림</div>
-          <div class="s">대회참석</div>
-        </div>
-      </div>
-      <div class="float float-3" data-screens="payment">
-        <div class="ico" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg>
-        </div>
-        <div>
-          <div class="t">토스로 송금</div>
-          <div class="s">회비 5,000원</div>
-        </div>
-      </div>
-      <div class="float float-4" data-screens="guest">
-        <div class="ico" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="17" y1="11" x2="23" y2="11"/></svg>
-        </div>
-        <div>
-          <div class="t">게스트 신청 1명</div>
-          <div class="s">김도현 · A조</div>
-        </div>
-      </div>
-      <div class="float float-5" data-screens="court">
-        <div class="ico" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="12" y1="3" x2="12" y2="21"/><line x1="3" y1="12" x2="21" y2="12"/></svg>
-        </div>
-        <div>
-          <div class="t">1번 코트 게임 중</div>
-          <div class="s">A조 · 2/4명</div>
-        </div>
-      </div>
-      <div class="float float-6" data-screens="notice">
-        <div class="ico" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 3 13 8 13 13 18 13 6 8 11 3 11"/><path d="M17 8a5 5 0 0 1 0 8"/><path d="M19.5 5.5a8.5 8.5 0 0 1 0 13"/></svg>
-        </div>
-        <div>
-          <div class="t">공지사항</div>
-          <div class="s">모앗 첫 배포</div>
-        </div>
-      </div>
-      <div class="float float-7" data-screens="photo">
-        <div class="ico" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-        </div>
-        <div>
-          <div class="t">사진첩 업데이트</div>
-          <div class="s">새 사진 4장</div>
-        </div>
-      </div>
-      <div class="float float-8" data-screens="vote">
-        <div class="ico" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-        </div>
-        <div>
-          <div class="t">모앗 투표 진행 중</div>
-          <div class="s">참석 100% · 1표</div>
-        </div>
-      </div>
-      <div class="float float-9" data-screens="member">
-        <div class="ico" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <div>
-          <div class="t">회원 44명</div>
-          <div class="s">A조 7 · B조 15 · C조 9 · D조 13</div>
-        </div>
-      </div>
-
-      <div class="phone">
-        <div class="phone-screen" id="phoneSlideshow">
-          <div class="slide active" data-screen="schedule"><img src="assets/schedule.png" alt="정모 일정" /></div>
-          <div class="slide" data-screen="guest"><img src="assets/guest-add.png" alt="게스트 추가" /></div>
-          <div class="slide" data-screen="payment"><img src="assets/payment.png" alt="회비" /></div>
-          <div class="slide" data-screen="court"><img src="assets/court.png" alt="코트 배치" /></div>
-          <div class="slide" data-screen="member"><img src="assets/guest.png" alt="회원 목록" /></div>
-          <div class="slide" data-screen="notice"><img src="assets/notice.png" alt="공지사항" /></div>
-          <div class="slide" data-screen="photo"><img src="assets/photo.png" alt="사진첩" /></div>
-          <div class="slide" data-screen="notification"><img src="assets/notification.png" alt="알림" /></div>
-          <div class="slide" data-screen="vote"><img src="assets/vote.png" alt="투표" /></div>
-        </div>
+  <div class="hero-stage" aria-hidden="true">
+    <div class="phone">
+      <div class="phone-screen" id="phoneSlideshow">
+        <div class="slide active" data-screen="schedule"><img src="assets/schedule.png" alt="정모 일정" /></div>
+        <div class="slide" data-screen="guest"><img src="assets/guest-add.png" alt="게스트 추가" /></div>
+        <div class="slide" data-screen="payment"><img src="assets/payment.png" alt="회비" /></div>
+        <div class="slide" data-screen="court"><img src="assets/court.png" alt="코트 배치" /></div>
+        <div class="slide" data-screen="member"><img src="assets/guest.png" alt="회원 목록" /></div>
+        <div class="slide" data-screen="notice"><img src="assets/notice.png" alt="공지사항" /></div>
+        <div class="slide" data-screen="photo"><img src="assets/photo.png" alt="사진첩" /></div>
+        <div class="slide" data-screen="notification"><img src="assets/notification.png" alt="알림" /></div>
+        <div class="slide" data-screen="vote"><img src="assets/vote.png" alt="투표" /></div>
       </div>
     </div>
   </div>
@@ -217,19 +136,19 @@
       <h2 class="h2">이런 거,<br/>한 번쯤 다 겪어보셨죠?</h2>
     </div>
 
-    <div class="pain-grid reveal-stagger">
-      <div class="pain-card">
-        <div class="pain-num">01</div>
+    <div class="pain-list reveal-stagger">
+      <div class="pain-item">
+        <div class="num">01</div>
         <h3>한 달치 정산, 2시간</h3>
         <p>엑셀 시트를 켜고, 카톡 송금 내역을 되짚어 가며 하나씩 매칭합니다. 매달 반복되는 일입니다.</p>
       </div>
-      <div class="pain-card">
-        <div class="pain-num">02</div>
+      <div class="pain-item">
+        <div class="num">02</div>
         <h3>또 "저 회비 냈는데요?"</h3>
         <p>같은 질문에 같은 답을 매달 다섯 번씩. 운영진의 시간이 그만큼 사라집니다.</p>
       </div>
-      <div class="pain-card">
-        <div class="pain-num">03</div>
+      <div class="pain-item">
+        <div class="num">03</div>
         <h3>공지가 묻혀버려요</h3>
         <p>정모 시간, 투표 안내, 회비 마감이 단톡방 메시지 사이에 묻혀버립니다.</p>
       </div>
@@ -237,74 +156,168 @@
   </div>
 </section>
 
-<!-- FEATURES (카드 모듈) -->
+<!-- FEATURES: 기능 스토리 인라인 (서브페이지 depth 제거 — 홈에서 바로 확인) -->
 <section id="features">
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="eyebrow">운영, 이렇게 달라져요</div>
       <h2 class="h2">흩어진 도구를<br/>하나의 앱으로.</h2>
-      <p class="lede">정모·회비·코트·회원 관리까지. 동호회 운영에 필요한 모든 것.</p>
+      <p class="lede">정모부터 자동 알림까지. 동호회 운영에 필요한 전부를 홈에서 바로 확인하세요.</p>
     </div>
+  </div>
 
-    <div class="feature-grid reveal-stagger">
-      <a class="feature-card" href="features.html#feature-schedule">
-        <div class="fc-ico fc-ico--blue" aria-hidden="true">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+  <div class="stories-track" id="storiesTrack">
+  <!-- Story 1: 정모 -->
+  <div class="story" id="feature-schedule">
+    <div class="wrap-wide">
+      <div class="story-row reveal">
+        <div>
+          <span class="story-tag">정모 일정</span>
+          <h3 class="story-h">다음 정모,<br/><span class="accent">모두가 알아요.</span></h3>
+          <p class="lede">오늘 기준 <span class="hl">가장 가까운 다음 정모</span>가 홈 화면 가장 위에 자동으로 떠요. 정모 전날 아침에는 참석자에게 자동 알림이 가니까, 다시 단톡방에 공지할 필요가 없어요.</p>
+          <ul class="story-points">
+            <li>가장 가까운 정모, 홈에 자동 표시</li>
+            <li>정모 전날 오전 10시, 참석자에게 자동 알림</li>
+            <li>참석·취소도 <b>탭 한 번</b>으로</li>
+          </ul>
         </div>
-        <h3>정모 일정</h3>
-        <p>가장 가까운 다음 정모가 홈 화면에 자동으로. 전날 아침엔 참석자에게 자동 알림까지.</p>
-        <span class="fc-arrow">자세히 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-
-      <a class="feature-card" href="features.html#feature-fee">
-        <div class="fc-ico fc-ico--amber" aria-hidden="true">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg>
+        <div class="story-visual">
+          <div class="story-phone"><div class="scr"><img src="assets/schedule.png" alt="정모 일정 화면" loading="lazy" /></div></div>
         </div>
-        <h3>회비 관리</h3>
-        <p>회비·게스트비·지출이 한 화면에. 미납자 자동 알림에, 토스로 한 번에 송금하면 자동 기록돼요.</p>
-        <span class="fc-arrow">자세히 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-
-      <a class="feature-card" href="features.html#feature-member">
-        <div class="fc-ico fc-ico--cyan" aria-hidden="true">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <h3>회원 관리</h3>
-        <p>조·성별로 구분된 회원 목록. 검색·필터로 한 번에 찾고, 모임장·총무 권한도 같은 화면에서.</p>
-        <span class="fc-arrow">자세히 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-
-      <a class="feature-card" href="features.html#feature-court">
-        <div class="fc-ico fc-ico--teal" aria-hidden="true">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="12" y1="3" x2="12" y2="21"/><line x1="3" y1="12" x2="21" y2="12"/></svg>
-        </div>
-        <h3>코트 배치</h3>
-        <p>정모 당일 코트별 게임 현황을 실시간으로 공유. 화이트보드·메모지가 필요 없어요.</p>
-        <span class="fc-arrow">자세히 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-
-      <a class="feature-card" href="features.html#feature-community">
-        <div class="fc-ico fc-ico--violet" aria-hidden="true">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 3 13 8 13 13 18 13 6 8 11 3 11"/><path d="M17 8a5 5 0 0 1 0 8"/><path d="M19.5 5.5a8.5 8.5 0 0 1 0 13"/></svg>
-        </div>
-        <h3>커뮤니티 · 투표</h3>
-        <p>공지는 상단 고정, 사진은 한 앨범에. 투표도 단톡방에 섞이지 않고 한 곳에 모여요.</p>
-        <span class="fc-arrow">자세히 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-
-      <a class="feature-card" href="features.html#feature-noti">
-        <div class="fc-ico fc-ico--pink" aria-hidden="true">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
-        </div>
-        <h3>자동 알림</h3>
-        <p>미납·정모·새 공지·투표까지. 필요한 알림은 앱이 알아서. 단톡방 알림 피로도가 확 줄어요.</p>
-        <span class="fc-arrow">자세히 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
+      </div>
     </div>
+  </div>
 
-    <div class="feature-more reveal">
-      <a class="btn btn-ghost" href="features.html">기능 전체 자세히 보기 →</a>
+  <!-- Story 2: 회비 -->
+  <div class="story" id="feature-fee">
+    <div class="wrap-wide">
+      <div class="story-row reverse reveal">
+        <div>
+          <span class="story-tag">회비 관리</span>
+          <h3 class="story-h">한 달 정산,<br/><span class="accent">자동으로 끝나요.</span></h3>
+          <p class="lede">회비·게스트비·지출이 한 화면에. 납부일이 지나면 미납자에게 매일 자동 알림이 가요. 멤버는 <span class="hl">토스로 한 번에 송금</span>하면, 자동으로 기록돼요.</p>
+          <ul class="story-points">
+            <li>회비·게스트비·지출 한 화면 관리</li>
+            <li>미납자에게 매일 오후 9시 자동 알림</li>
+            <li>토스로 <b>1초 송금</b>, 자동 기록</li>
+          </ul>
+        </div>
+        <div class="story-visual">
+          <div class="story-phone"><div class="scr"><img src="assets/payment.png" alt="회비 관리 화면" loading="lazy" /></div></div>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <!-- Story 3: 회원 관리 -->
+  <div class="story" id="feature-member">
+    <div class="wrap-wide">
+      <div class="story-row reveal">
+        <div>
+          <span class="story-tag">회원 관리</span>
+          <h3 class="story-h">회원 정보가,<br/><span class="accent">한눈에 들어와요.</span></h3>
+          <p class="lede">조별·성별로 색상 구분된 회원 목록. 이름 검색이나 <span class="hl">조·성별 필터로 한 번에</span> 찾을 수 있어요. 모임장 위임이나 총무 지정도 같은 화면에서 끝나요.</p>
+          <ul class="story-points">
+            <li>조·성별 통계 한 화면에</li>
+            <li>이름 검색·조별 필터 빠른 조회</li>
+            <li>모임장·총무 권한 부여까지 한 곳에서</li>
+          </ul>
+        </div>
+        <div class="story-visual">
+          <div class="story-phone"><div class="scr"><img src="assets/guest.png" alt="회원 목록 화면" loading="lazy" /></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Story 4: 코트 -->
+  <div class="story" id="feature-court">
+    <div class="wrap-wide">
+      <div class="story-row reverse reveal">
+        <div>
+          <span class="story-tag">코트 배치</span>
+          <h3 class="story-h">오늘 누가<br/><span class="accent">어느 코트에서?</span></h3>
+          <p class="lede">정모 당일 <span class="hl">코트별 게임 현황</span>을 실시간으로 공유해요. 화이트보드와 메모지가 필요 없습니다. 운영진과 멤버 모두 모바일로 같이 봐요.</p>
+          <ul class="story-points">
+            <li>코트별 게임 현황 실시간 공유</li>
+            <li>화이트보드·메모지 불필요</li>
+            <li>운영진·멤버 함께 확인</li>
+          </ul>
+        </div>
+        <div class="story-visual">
+          <div class="story-phone"><div class="scr"><img src="assets/court.png" alt="코트 배치 화면" loading="lazy" /></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Story 5: 커뮤니티 -->
+  <div class="story" id="feature-community">
+    <div class="wrap-wide">
+      <div class="story-row reveal">
+        <div>
+          <span class="story-tag">커뮤니티</span>
+          <h3 class="story-h">공지와 사진이<br/><span class="accent">한 곳에 모여요.</span></h3>
+          <p class="lede"><span class="hl">단톡방을 거꾸로 스크롤할 일이 없어요.</span> 공지는 상단에 고정되고, 정모 사진은 한 앨범에 모여요. 새 글이 올라오면 자동 푸시 알림이 가니 멤버도 놓칠 일이 없고요.</p>
+          <ul class="story-points">
+            <li>중요 공지는 상단 고정·자동 푸시 알림</li>
+            <li>정모 사진 업로드</li>
+            <li>게시판으로 자유로운 소통까지</li>
+          </ul>
+        </div>
+        <div class="story-visual">
+          <div class="story-phone">
+            <div class="scr scr-slides">
+              <img src="assets/notice.png" alt="공지사항 화면" loading="lazy" />
+              <img src="assets/photo.png" alt="사진첩 화면" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Story 6: 투표 -->
+  <div class="story" id="feature-vote">
+    <div class="wrap-wide">
+      <div class="story-row reverse reveal">
+        <div>
+          <span class="story-tag">투표</span>
+          <h3 class="story-h">의견 모으기,<br/><span class="accent">한 번에 끝.</span></h3>
+          <p class="lede">투표가 단톡방 메시지에 섞이지 않고 따로 한 곳에 모여요. 정모 시간, 회비 인상, 단체복 디자인까지 — 안건마다 <span class="hl">익명·복수 선택을 자유롭게</span> 만들 수 있고요.</p>
+          <ul class="story-points">
+            <li>복수 선택·익명 투표 옵션 지원</li>
+            <li>마감일 설정 시 자동 종료</li>
+            <li>새 투표 등록 시 멤버 전체에 푸시 알림</li>
+          </ul>
+        </div>
+        <div class="story-visual">
+          <div class="story-phone"><div class="scr"><img src="assets/vote.png" alt="투표 화면" loading="lazy" /></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Story 7: 알림 -->
+  <div class="story story-last" id="feature-noti">
+    <div class="wrap-wide">
+      <div class="story-row reveal">
+        <div>
+          <span class="story-tag">알림 발송</span>
+          <h3 class="story-h">단톡방으로<br/><span class="accent">안 보내도 돼요.</span></h3>
+          <p class="lede">미납자, 정모, 새 공지, 투표까지. 필요한 알림은 <span class="hl">앱이 자동으로</span> 보내요. 단톡방 알림 피로도가 한결 줄어듭니다.</p>
+          <ul class="story-points">
+            <li>미납자에게 매일 오후 9시 자동 알림</li>
+            <li>정모 전날 오전 10시 자동 알림</li>
+            <li>새 공지·투표도 자동 푸시 발송</li>
+          </ul>
+        </div>
+        <div class="story-visual">
+          <div class="story-phone"><div class="scr"><img src="assets/notification.png" alt="알림 화면" loading="lazy" /></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
   </div>
 </section>
 
@@ -362,38 +375,38 @@
         <tbody>
           <tr>
             <td>모바일 앱</td>
-            <td><span class="mark no"><span class="mark-ico">✕</span>없음</span></td>
-            <td class="us"><span class="mark ok"><span class="mark-ico">✓</span>iOS · Android</span></td>
+            <td><span class="mark no"><span class="mark-ico" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></span>없음</span></td>
+            <td class="us"><span class="mark ok"><span class="mark-ico" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12.5 9.5 18 20 6.5"/></svg></span>iOS · Android</span></td>
           </tr>
           <tr>
             <td>멤버도 직접 사용</td>
-            <td><span class="mark mid"><span class="mark-ico">~</span>카톡으로만</span></td>
-            <td class="us"><span class="mark ok"><span class="mark-ico">✓</span>모두 함께</span></td>
+            <td><span class="mark mid"><span class="mark-ico" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg></span>카톡으로만</span></td>
+            <td class="us"><span class="mark ok"><span class="mark-ico" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12.5 9.5 18 20 6.5"/></svg></span>모두 함께</span></td>
           </tr>
           <tr>
             <td>코트 배치 · 게임 운영</td>
-            <td><span class="mark no"><span class="mark-ico">✕</span>화이트보드</span></td>
-            <td class="us"><span class="mark ok"><span class="mark-ico">✓</span>실시간</span></td>
+            <td><span class="mark no"><span class="mark-ico" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></span>화이트보드</span></td>
+            <td class="us"><span class="mark ok"><span class="mark-ico" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12.5 9.5 18 20 6.5"/></svg></span>실시간</span></td>
           </tr>
           <tr>
             <td>공지 · 투표 · 사진</td>
-            <td><span class="mark no"><span class="mark-ico">✕</span>단톡방 묻힘</span></td>
-            <td class="us"><span class="mark ok"><span class="mark-ico">✓</span>앱 내 통합</span></td>
+            <td><span class="mark no"><span class="mark-ico" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></span>단톡방 묻힘</span></td>
+            <td class="us"><span class="mark ok"><span class="mark-ico" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12.5 9.5 18 20 6.5"/></svg></span>앱 내 통합</span></td>
           </tr>
           <tr>
             <td>회원 목록 · 관리</td>
-            <td><span class="mark no"><span class="mark-ico">✕</span>엑셀</span></td>
-            <td class="us"><span class="mark ok"><span class="mark-ico">✓</span>앱에서 바로</span></td>
+            <td><span class="mark no"><span class="mark-ico" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></span>엑셀</span></td>
+            <td class="us"><span class="mark ok"><span class="mark-ico" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12.5 9.5 18 20 6.5"/></svg></span>앱에서 바로</span></td>
           </tr>
           <tr>
             <td>알림 발송</td>
-            <td><span class="mark no"><span class="mark-ico">✕</span>단톡방 직접</span></td>
-            <td class="us"><span class="mark ok"><span class="mark-ico">✓</span>자동 푸시</span></td>
+            <td><span class="mark no"><span class="mark-ico" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></span>단톡방 직접</span></td>
+            <td class="us"><span class="mark ok"><span class="mark-ico" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12.5 9.5 18 20 6.5"/></svg></span>자동 푸시</span></td>
           </tr>
           <tr>
             <td>가격</td>
-            <td><span class="mark ok"><span class="mark-ico">✓</span>무료</span></td>
-            <td class="us"><span class="mark ok"><span class="mark-ico">✓</span>무료, 광고 없음</span></td>
+            <td><span class="mark ok"><span class="mark-ico" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12.5 9.5 18 20 6.5"/></svg></span>무료</span></td>
+            <td class="us"><span class="mark ok"><span class="mark-ico" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12.5 9.5 18 20 6.5"/></svg></span>무료, 광고 없음</span></td>
           </tr>
         </tbody>
       </table>
@@ -512,6 +525,7 @@
      config.js는 다른 스크립트가 의존하므로 가장 먼저 로드 -->
 <script src="scripts/config.js" defer></script>
 <script src="scripts/nav.js" defer></script>
+<script src="scripts/theme.js" defer></script>
 <script src="scripts/reveal.js" defer></script>
 <script src="scripts/counter.js" defer></script>
 <script src="scripts/slideshow.js" defer></script>

@@ -28,19 +28,12 @@
   .hero .hero-ctas { animation: fadeUp .8s .45s cubic-bezier(.2,.7,.2,1) both; }
   .hero-meta { animation: fadeUp .8s .6s cubic-bezier(.2,.7,.2,1) both; }
   .hero-chip .dot { animation: pulseDot 2.4s 1.2s ease-in-out infinite; }
-  .blob { animation: blobRotate 30s linear infinite; }
   .phone { animation: fadeUp .9s .2s cubic-bezier(.2,.7,.2,1) both, floatY 6s 1.1s ease-in-out infinite; }
 
   /* 플로팅 칩 fade-in + 미세 부유 */
   .float-1 { animation: fadeUp .7s .6s cubic-bezier(.2,.7,.2,1) both, floatB1 5s 1.3s ease-in-out infinite; }
   .float-2 { animation: fadeUp .7s .8s cubic-bezier(.2,.7,.2,1) both, floatB2 6s 1.5s ease-in-out infinite; }
   .float-3 { animation: fadeUp .7s 1.0s cubic-bezier(.2,.7,.2,1) both, floatB3 5.5s 1.7s ease-in-out infinite; }
-  .float-4 { animation: fadeUp .7s .9s cubic-bezier(.2,.7,.2,1) both, floatB1 5.3s 1.4s ease-in-out infinite; }
-  .float-5 { animation: fadeUp .7s 1.1s cubic-bezier(.2,.7,.2,1) both, floatB2 5.8s 1.8s ease-in-out infinite; }
-  .float-6 { animation: fadeUp .7s 1.0s cubic-bezier(.2,.7,.2,1) both, floatB3 6s 1.6s ease-in-out infinite; }
-  .float-7 { animation: fadeUp .7s 1.2s cubic-bezier(.2,.7,.2,1) both, floatB1 5.6s 1.9s ease-in-out infinite; }
-  .float-8 { animation: fadeUp .7s 1.3s cubic-bezier(.2,.7,.2,1) both, floatB2 6.2s 2.0s ease-in-out infinite; }
-  .float-9 { animation: fadeUp .7s 1.4s cubic-bezier(.2,.7,.2,1) both, floatB3 5.4s 2.1s ease-in-out infinite; }
 
   /* CTA 블롭 + 칩 */
   .cta-section::before { animation: blobDrift 10s ease-in-out infinite; }
@@ -53,7 +46,7 @@
   /* 스토리 폰: 카드 자체 애니메이션과 겹치지 않도록 자체 애니메이션 없음 */
 
   /* Scroll reveal */
-  .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
   .reveal.in { opacity: 1; transform: translateY(0); }
   .reveal-stagger > * { opacity: 0; transform: translateY(20px); transition: opacity .6s cubic-bezier(.2,.7,.2,1), transform .6s cubic-bezier(.2,.7,.2,1); }
   .reveal-stagger.in > *:nth-child(1) { transition-delay: .05s; }
@@ -62,21 +55,21 @@
   .reveal-stagger.in > *:nth-child(4) { transition-delay: .35s; }
   .reveal-stagger.in > * { opacity: 1; transform: translateY(0); }
 
-  /* Story 카드: 양쪽 사이드에서 슬라이드인 */
+  /* Story 카드: 양쪽 사이드에서 은은하게 슬라이드인 */
   @keyframes storySlideInLeft {
-    from { opacity: 0; transform: translateX(-80px) scale(0.96); }
+    from { opacity: 0; transform: translateX(-36px) scale(0.985); }
     to { opacity: 1; transform: translateX(0) scale(1); }
   }
   @keyframes storySlideInRight {
-    from { opacity: 0; transform: translateX(80px) scale(0.96); }
+    from { opacity: 0; transform: translateX(36px) scale(0.985); }
     to { opacity: 1; transform: translateX(0) scale(1); }
   }
   .story-row.reveal { opacity: 0; }
   .story-row.reveal.in:not(.settled) {
-    animation: storySlideInLeft .9s cubic-bezier(.2,.7,.2,1) forwards;
+    animation: storySlideInLeft .7s cubic-bezier(.2,.7,.2,1) forwards;
   }
   .story-row.reverse.reveal.in:not(.settled) {
-    animation: storySlideInRight .9s cubic-bezier(.2,.7,.2,1) forwards;
+    animation: storySlideInRight .7s cubic-bezier(.2,.7,.2,1) forwards;
   }
 }
 
@@ -96,16 +89,6 @@
     transform: none;
   }
 }
-.story-row {
-  transition: transform .25s cubic-bezier(.2,.7,.3,1), box-shadow .25s ease;
-}
-@media (hover: hover) {
-  .story-row.settled:hover {
-    transform: translateY(-4px);
-    box-shadow:
-      0 32px 64px -24px rgba(25, 31, 40, 0.12),
-      0 12px 24px -10px rgba(25, 31, 40, 0.06);
-  }
-}
+/* 언박싱된 스토리에는 hover 리프트 없음 (배경 위 콘텐츠는 정적으로) */
 
 /* prefers-reduced-motion: 사용자가 모션 줄이기 선호 시 정적 상태 유지 */
